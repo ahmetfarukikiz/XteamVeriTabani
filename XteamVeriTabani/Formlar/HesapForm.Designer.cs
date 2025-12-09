@@ -49,7 +49,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Calibri", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label4.Location = new Point(572, 230);
+            label4.Location = new Point(612, 286);
             label4.Name = "label4";
             label4.Size = new Size(172, 41);
             label4.TabIndex = 22;
@@ -60,7 +60,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Calibri", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(114, 310);
+            label2.Location = new Point(154, 366);
             label2.Name = "label2";
             label2.Size = new Size(166, 41);
             label2.TabIndex = 20;
@@ -70,7 +70,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Calibri", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label5.Location = new Point(114, 269);
+            label5.Location = new Point(154, 325);
             label5.Name = "label5";
             label5.Size = new Size(90, 41);
             label5.TabIndex = 18;
@@ -80,7 +80,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Calibri", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.Location = new Point(114, 228);
+            label3.Location = new Point(154, 284);
             label3.Name = "label3";
             label3.Size = new Size(196, 41);
             label3.TabIndex = 16;
@@ -90,7 +90,7 @@
             // 
             hesapAdiLabel.AutoSize = true;
             hesapAdiLabel.Font = new Font("Segoe UI Variable Display Semib", 25F);
-            hesapAdiLabel.Location = new Point(114, 111);
+            hesapAdiLabel.Location = new Point(154, 167);
             hesapAdiLabel.Name = "hesapAdiLabel";
             hesapAdiLabel.Size = new Size(158, 56);
             hesapAdiLabel.TabIndex = 15;
@@ -98,7 +98,7 @@
             // 
             // kullaniciAdiTB
             // 
-            kullaniciAdiTB.Location = new Point(313, 240);
+            kullaniciAdiTB.Location = new Point(353, 296);
             kullaniciAdiTB.Name = "kullaniciAdiTB";
             kullaniciAdiTB.ReadOnly = true;
             kullaniciAdiTB.Size = new Size(200, 27);
@@ -106,7 +106,7 @@
             // 
             // sifreTB
             // 
-            sifreTB.Location = new Point(313, 281);
+            sifreTB.Location = new Point(353, 337);
             sifreTB.Name = "sifreTB";
             sifreTB.ReadOnly = true;
             sifreTB.Size = new Size(200, 27);
@@ -117,7 +117,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 15F, FontStyle.Bold);
             label1.ForeColor = Color.FromArgb(64, 64, 64);
-            label1.Location = new Point(755, 287);
+            label1.Location = new Point(795, 343);
             label1.Name = "label1";
             label1.RightToLeft = RightToLeft.Yes;
             label1.Size = new Size(141, 35);
@@ -129,7 +129,7 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Calibri", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label6.Location = new Point(572, 284);
+            label6.Location = new Point(612, 340);
             label6.Name = "label6";
             label6.Size = new Size(145, 41);
             label6.TabIndex = 26;
@@ -138,7 +138,7 @@
             // 
             // hesapAdiTB
             // 
-            hesapAdiTB.Location = new Point(313, 322);
+            hesapAdiTB.Location = new Point(353, 378);
             hesapAdiTB.Name = "hesapAdiTB";
             hesapAdiTB.ReadOnly = true;
             hesapAdiTB.Size = new Size(200, 27);
@@ -146,7 +146,7 @@
             // 
             // button1
             // 
-            button1.Location = new Point(313, 423);
+            button1.Location = new Point(353, 479);
             button1.Name = "button1";
             button1.Size = new Size(94, 29);
             button1.TabIndex = 29;
@@ -155,7 +155,7 @@
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(755, 242);
+            textBox2.Location = new Point(795, 298);
             textBox2.Name = "textBox2";
             textBox2.ReadOnly = true;
             textBox2.Size = new Size(200, 27);
@@ -164,7 +164,7 @@
             // 
             // button2
             // 
-            button2.Location = new Point(419, 423);
+            button2.Location = new Point(459, 479);
             button2.Name = "button2";
             button2.Size = new Size(94, 29);
             button2.TabIndex = 31;
@@ -173,7 +173,7 @@
             // 
             // epostaTB
             // 
-            epostaTB.Location = new Point(313, 372);
+            epostaTB.Location = new Point(353, 428);
             epostaTB.Name = "epostaTB";
             epostaTB.ReadOnly = true;
             epostaTB.Size = new Size(200, 27);
@@ -183,7 +183,7 @@
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Calibri", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label7.Location = new Point(114, 360);
+            label7.Location = new Point(154, 416);
             label7.Name = "label7";
             label7.Size = new Size(129, 41);
             label7.TabIndex = 32;
@@ -209,7 +209,10 @@
             Controls.Add(label5);
             Controls.Add(label3);
             Controls.Add(hesapAdiLabel);
+            FormBorderStyle = FormBorderStyle.Fixed3D;
+            MaximizeBox = false;
             Name = "HesapForm";
+            StartPosition = FormStartPosition.CenterParent;
             Text = "HesapForm";
             ResumeLayout(false);
             PerformLayout();

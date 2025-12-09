@@ -8,14 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace XteamVeriTabani
+namespace XteamVeriTabani.Formlar.MagazaFormlari
 {
-    public partial class HesapForm : Form
+    public partial class SepetForm : Form
     {
-        public HesapForm()
+        public SepetForm()
         {
             InitializeComponent();
         }
-
     }
 }

@@ -34,7 +34,10 @@
             arkadasButton = new Button();
             label1 = new Label();
             kutuphaneButton = new Button();
-            cikisButton = new Button();
+            button1 = new Button();
+            hesapAdiLabel = new Label();
+            uygulamadanCikisBtn = new Button();
+            satinAlimlarButton = new Button();
             SuspendLayout();
             // 
             // magazaButton
@@ -42,7 +45,7 @@
             magazaButton.BackColor = Color.Azure;
             magazaButton.Font = new Font("Yu Gothic UI", 12F, FontStyle.Bold);
             magazaButton.ForeColor = Color.MidnightBlue;
-            magazaButton.Location = new Point(171, 316);
+            magazaButton.Location = new Point(161, 283);
             magazaButton.Name = "magazaButton";
             magazaButton.Size = new Size(252, 120);
             magazaButton.TabIndex = 0;
@@ -55,7 +58,7 @@
             profilButton.BackColor = Color.Azure;
             profilButton.Font = new Font("Yu Gothic UI", 12F, FontStyle.Bold);
             profilButton.ForeColor = Color.MidnightBlue;
-            profilButton.Location = new Point(171, 459);
+            profilButton.Location = new Point(161, 426);
             profilButton.Name = "profilButton";
             profilButton.Size = new Size(252, 120);
             profilButton.TabIndex = 2;
@@ -68,7 +71,7 @@
             hesapButton.BackColor = Color.Azure;
             hesapButton.Font = new Font("Yu Gothic UI", 12F, FontStyle.Bold);
             hesapButton.ForeColor = Color.MidnightBlue;
-            hesapButton.Location = new Point(455, 459);
+            hesapButton.Location = new Point(445, 426);
             hesapButton.Name = "hesapButton";
             hesapButton.Size = new Size(252, 120);
             hesapButton.TabIndex = 3;
@@ -81,7 +84,7 @@
             arkadasButton.BackColor = Color.Azure;
             arkadasButton.Font = new Font("Yu Gothic UI", 12F, FontStyle.Bold);
             arkadasButton.ForeColor = Color.MidnightBlue;
-            arkadasButton.Location = new Point(740, 316);
+            arkadasButton.Location = new Point(730, 283);
             arkadasButton.Name = "arkadasButton";
             arkadasButton.Size = new Size(252, 120);
             arkadasButton.TabIndex = 4;
@@ -94,7 +97,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI Historic", 50F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = SystemColors.ActiveCaptionText;
-            label1.Location = new Point(171, 141);
+            label1.Location = new Point(161, 108);
             label1.Name = "label1";
             label1.Size = new Size(285, 112);
             label1.TabIndex = 6;
@@ -105,7 +108,7 @@
             kutuphaneButton.BackColor = Color.Azure;
             kutuphaneButton.Font = new Font("Yu Gothic UI", 12F, FontStyle.Bold);
             kutuphaneButton.ForeColor = Color.MidnightBlue;
-            kutuphaneButton.Location = new Point(455, 316);
+            kutuphaneButton.Location = new Point(445, 283);
             kutuphaneButton.Name = "kutuphaneButton";
             kutuphaneButton.Size = new Size(252, 120);
             kutuphaneButton.TabIndex = 7;
@@ -113,18 +116,54 @@
             kutuphaneButton.UseVisualStyleBackColor = false;
             kutuphaneButton.Click += kutuphaneButton_Click;
             // 
-            // cikisButton
+            // button1
             // 
-            cikisButton.BackColor = Color.Azure;
-            cikisButton.Font = new Font("Yu Gothic UI", 12F, FontStyle.Bold);
-            cikisButton.ForeColor = Color.MidnightBlue;
-            cikisButton.Location = new Point(740, 459);
-            cikisButton.Name = "cikisButton";
-            cikisButton.Size = new Size(252, 120);
-            cikisButton.TabIndex = 8;
-            cikisButton.Text = "Çıkış";
-            cikisButton.UseVisualStyleBackColor = false;
-            cikisButton.Click += cikisButton_Click;
+            button1.BackColor = SystemColors.ControlLightLight;
+            button1.Font = new Font("Yu Gothic UI", 11F, FontStyle.Bold);
+            button1.ForeColor = SystemColors.ActiveCaptionText;
+            button1.Location = new Point(161, 587);
+            button1.Name = "button1";
+            button1.Size = new Size(168, 55);
+            button1.TabIndex = 9;
+            button1.Text = "Hesaptan Çık";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
+            // 
+            // hesapAdiLabel
+            // 
+            hesapAdiLabel.AutoSize = true;
+            hesapAdiLabel.Font = new Font("Segoe UI", 15F);
+            hesapAdiLabel.Location = new Point(432, 169);
+            hesapAdiLabel.Name = "hesapAdiLabel";
+            hesapAdiLabel.Size = new Size(98, 35);
+            hesapAdiLabel.TabIndex = 11;
+            hesapAdiLabel.Text = "Hesap1";
+            // 
+            // uygulamadanCikisBtn
+            // 
+            uygulamadanCikisBtn.BackColor = SystemColors.ControlLightLight;
+            uygulamadanCikisBtn.Font = new Font("Yu Gothic UI", 11F, FontStyle.Bold);
+            uygulamadanCikisBtn.ForeColor = SystemColors.ActiveCaptionText;
+            uygulamadanCikisBtn.Location = new Point(335, 587);
+            uygulamadanCikisBtn.Name = "uygulamadanCikisBtn";
+            uygulamadanCikisBtn.Size = new Size(195, 55);
+            uygulamadanCikisBtn.TabIndex = 12;
+            uygulamadanCikisBtn.Text = "Uygulamadan Çık";
+            uygulamadanCikisBtn.UseVisualStyleBackColor = false;
+            uygulamadanCikisBtn.Click += uygulamadanCikisBtn_Click;
+            // 
+            // satinAlimlarButton
+            // 
+            satinAlimlarButton.BackColor = Color.Azure;
+            satinAlimlarButton.Font = new Font("Yu Gothic UI", 12F, FontStyle.Bold);
+            satinAlimlarButton.ForeColor = Color.MidnightBlue;
+            satinAlimlarButton.Location = new Point(730, 426);
+            satinAlimlarButton.Name = "satinAlimlarButton";
+            satinAlimlarButton.Size = new Size(252, 120);
+            satinAlimlarButton.TabIndex = 13;
+            satinAlimlarButton.Text = "Satın Alımlar";
+            satinAlimlarButton.UseVisualStyleBackColor = false;
+            satinAlimlarButton.Click += satinAlimlarButton_Click;
             // 
             // AnaMenuForm
             // 
@@ -132,7 +171,10 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1202, 744);
-            Controls.Add(cikisButton);
+            Controls.Add(satinAlimlarButton);
+            Controls.Add(uygulamadanCikisBtn);
+            Controls.Add(hesapAdiLabel);
+            Controls.Add(button1);
             Controls.Add(kutuphaneButton);
             Controls.Add(label1);
             Controls.Add(arkadasButton);
@@ -141,6 +183,7 @@
             Controls.Add(magazaButton);
             MaximizeBox = false;
             Name = "AnaMenuForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "AnaMenu";
             ResumeLayout(false);
             PerformLayout();
@@ -154,6 +197,9 @@
         private Button arkadasButton;
         private Label label1;
         private Button kutuphaneButton;
-        private Button cikisButton;
+        private Button button1;
+        private Label hesapAdiLabel;
+        private Button uygulamadanCikisBtn;
+        private Button satinAlimlarButton;
     }
 }

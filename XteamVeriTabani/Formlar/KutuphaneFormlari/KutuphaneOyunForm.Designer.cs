@@ -30,7 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(KutuphaneOyunForm));
             groupBox1 = new GroupBox();
+            label8 = new Label();
             durumLabel = new Label();
+            kategoriListBox = new ListBox();
             label7 = new Label();
             label2 = new Label();
             dilListBox = new ListBox();
@@ -48,8 +50,6 @@
             pictureBox1 = new PictureBox();
             oyunBaslikLabel = new Label();
             oyunuAcButton = new Button();
-            label8 = new Label();
-            kategoriListBox = new ListBox();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -78,6 +78,16 @@
             groupBox1.TabIndex = 14;
             groupBox1.TabStop = false;
             // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Segoe UI", 12F);
+            label8.Location = new Point(216, 386);
+            label8.Name = "label8";
+            label8.Size = new Size(113, 28);
+            label8.TabIndex = 26;
+            label8.Text = "Kategoriler:";
+            // 
             // durumLabel
             // 
             durumLabel.AutoSize = true;
@@ -88,6 +98,14 @@
             durumLabel.Size = new Size(108, 28);
             durumLabel.TabIndex = 22;
             durumLabel.Text = "yüklü değil";
+            // 
+            // kategoriListBox
+            // 
+            kategoriListBox.FormattingEnabled = true;
+            kategoriListBox.Location = new Point(216, 417);
+            kategoriListBox.Name = "kategoriListBox";
+            kategoriListBox.Size = new Size(235, 104);
+            kategoriListBox.TabIndex = 25;
             // 
             // label7
             // 
@@ -259,24 +277,6 @@
             oyunuAcButton.Text = "Aç";
             oyunuAcButton.UseVisualStyleBackColor = true;
             // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.Font = new Font("Segoe UI", 12F);
-            label8.Location = new Point(216, 386);
-            label8.Name = "label8";
-            label8.Size = new Size(113, 28);
-            label8.TabIndex = 26;
-            label8.Text = "Kategoriler:";
-            // 
-            // kategoriListBox
-            // 
-            kategoriListBox.FormattingEnabled = true;
-            kategoriListBox.Location = new Point(216, 417);
-            kategoriListBox.Name = "kategoriListBox";
-            kategoriListBox.Size = new Size(235, 104);
-            kategoriListBox.TabIndex = 25;
-            // 
             // KutuphaneOyunForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -287,7 +287,10 @@
             Controls.Add(oyunuYukleSilButton);
             Controls.Add(pictureBox1);
             Controls.Add(oyunBaslikLabel);
+            FormBorderStyle = FormBorderStyle.Fixed3D;
+            MaximizeBox = false;
             Name = "KutuphaneOyunForm";
+            StartPosition = FormStartPosition.CenterParent;
             Text = "KutuphaneOyunForm";
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();

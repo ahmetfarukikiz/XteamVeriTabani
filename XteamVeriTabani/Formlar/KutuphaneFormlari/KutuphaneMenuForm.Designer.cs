@@ -49,6 +49,7 @@
             oyunuGorButton.TabIndex = 17;
             oyunuGorButton.Text = "Oyunu Gör";
             oyunuGorButton.UseVisualStyleBackColor = true;
+            oyunuGorButton.Click += this.oyunuGorButton_Click;
             // 
             // label4
             // 
@@ -115,7 +116,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI Variable Display Semib", 25F);
-            label1.Location = new Point(62, 18);
+            label1.Location = new Point(89, 25);
             label1.Name = "label1";
             label1.Size = new Size(230, 56);
             label1.TabIndex = 9;

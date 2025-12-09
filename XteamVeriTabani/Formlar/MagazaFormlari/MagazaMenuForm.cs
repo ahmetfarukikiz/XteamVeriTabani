@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using XteamVeriTabani.Formlar;
+using XteamVeriTabani.Formlar.MagazaFormlari;
 using XteamVeriTabani.Models;
 
 namespace XteamVeriTabani
@@ -32,6 +33,12 @@ namespace XteamVeriTabani
         {
             MagazaOyunForm magazaOyunForm = new MagazaOyunForm(/*buraya oyunun kendisi veya özellikleri parametre olarak gidicek*/0);
             magazaOyunForm.ShowDialog();
+        }
+
+        private void sepetButton_Click(object sender, EventArgs e)
+        {
+            SepetForm sepetForm = new SepetForm();
+            sepetForm.ShowDialog();
         }
     }
 }

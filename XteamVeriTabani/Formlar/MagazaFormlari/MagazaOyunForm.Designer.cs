@@ -40,6 +40,7 @@
             label7 = new Label();
             kategoriListBox = new ListBox();
             label5 = new Label();
+            dilListBox = new ListBox();
             yuklemeBoyutuLabel = new Label();
             label6 = new Label();
             indirilmeSayisiLabel = new Label();
@@ -48,7 +49,6 @@
             label3 = new Label();
             label2 = new Label();
             kampanyaLabel = new Label();
-            dilListBox = new ListBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             groupBox1.SuspendLayout();
             SuspendLayout();
@@ -171,6 +171,14 @@
             label5.TabIndex = 22;
             label5.Text = "Desteklenen Diller:";
             // 
+            // dilListBox
+            // 
+            dilListBox.FormattingEnabled = true;
+            dilListBox.Location = new Point(28, 386);
+            dilListBox.Name = "dilListBox";
+            dilListBox.Size = new Size(235, 104);
+            dilListBox.TabIndex = 21;
+            // 
             // yuklemeBoyutuLabel
             // 
             yuklemeBoyutuLabel.AutoSize = true;
@@ -256,14 +264,6 @@
             kampanyaLabel.Text = "%50 INDIRIM";
             kampanyaLabel.Visible = false;
             // 
-            // dilListBox
-            // 
-            dilListBox.FormattingEnabled = true;
-            dilListBox.Location = new Point(28, 386);
-            dilListBox.Name = "dilListBox";
-            dilListBox.Size = new Size(235, 104);
-            dilListBox.TabIndex = 21;
-            // 
             // MagazaOyunForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -275,7 +275,10 @@
             Controls.Add(oyunFiyatLabel);
             Controls.Add(pictureBox1);
             Controls.Add(oyunBaslikLabel);
+            FormBorderStyle = FormBorderStyle.Fixed3D;
+            MaximizeBox = false;
             Name = "MagazaOyunForm";
+            StartPosition = FormStartPosition.CenterParent;
             Text = "OyunForm";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             groupBox1.ResumeLayout(false);

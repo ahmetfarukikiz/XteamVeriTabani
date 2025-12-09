@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using XteamVeriTabani.Formlar;
+using XteamVeriTabani.Formlar.KutuphaneFormlari;
 
 namespace XteamVeriTabani
 {
@@ -16,5 +18,14 @@ namespace XteamVeriTabani
         {
             InitializeComponent();
         }
+
+
+
+        private void oyunuGorButton_Click(object sender, EventArgs e)
+        {
+            KutuphaneOyunForm kutuphaneOyunForm = new KutuphaneOyunForm(/*buraya oyunun kendisi veya özellikleri parametre olarak gidicek*/0);
+            kutuphaneOyunForm.ShowDialog();
+        }
+
     }
 }

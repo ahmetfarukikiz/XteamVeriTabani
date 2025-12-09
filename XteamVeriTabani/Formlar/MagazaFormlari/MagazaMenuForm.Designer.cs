@@ -38,6 +38,9 @@ namespace XteamVeriTabani
             button1 = new Button();
             label4 = new Label();
             oyunuGorButton = new Button();
+            label5 = new Label();
+            bakiyeLabel = new Label();
+            sepetButton = new Button();
             SuspendLayout();
             // 
             // label1
@@ -61,7 +64,7 @@ namespace XteamVeriTabani
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(307, 106);
+            textBox1.Location = new Point(250, 125);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(160, 27);
             textBox1.TabIndex = 2;
@@ -69,7 +72,7 @@ namespace XteamVeriTabani
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(307, 83);
+            label2.Location = new Point(250, 102);
             label2.Name = "label2";
             label2.Size = new Size(74, 20);
             label2.TabIndex = 3;
@@ -79,7 +82,7 @@ namespace XteamVeriTabani
             // 
             comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(517, 106);
+            comboBox1.Location = new Point(460, 125);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(151, 28);
             comboBox1.TabIndex = 4;
@@ -87,7 +90,7 @@ namespace XteamVeriTabani
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(517, 83);
+            label3.Location = new Point(460, 102);
             label3.Name = "label3";
             label3.Size = new Size(83, 20);
             label3.TabIndex = 5;
@@ -95,7 +98,7 @@ namespace XteamVeriTabani
             // 
             // button1
             // 
-            button1.Location = new Point(715, 106);
+            button1.Location = new Point(658, 125);
             button1.Name = "button1";
             button1.Size = new Size(153, 29);
             button1.TabIndex = 6;
@@ -122,11 +125,44 @@ namespace XteamVeriTabani
             oyunuGorButton.UseVisualStyleBackColor = true;
             oyunuGorButton.Click += oyunuGorButton_Click;
             // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 16F);
+            label5.Location = new Point(1030, 28);
+            label5.Name = "label5";
+            label5.Size = new Size(99, 37);
+            label5.TabIndex = 9;
+            label5.Text = "Bakiye:";
+            // 
+            // bakiyeLabel
+            // 
+            bakiyeLabel.AutoSize = true;
+            bakiyeLabel.Font = new Font("Segoe UI", 16F);
+            bakiyeLabel.Location = new Point(1133, 28);
+            bakiyeLabel.Name = "bakiyeLabel";
+            bakiyeLabel.Size = new Size(74, 37);
+            bakiyeLabel.TabIndex = 10;
+            bakiyeLabel.Text = "12TL";
+            // 
+            // sepetButton
+            // 
+            sepetButton.Location = new Point(899, 28);
+            sepetButton.Name = "sepetButton";
+            sepetButton.Size = new Size(125, 41);
+            sepetButton.TabIndex = 11;
+            sepetButton.Text = "Sepet";
+            sepetButton.UseVisualStyleBackColor = true;
+            sepetButton.Click += sepetButton_Click;
+            // 
             // MagazaMenuForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1219, 778);
+            ClientSize = new Size(1219, 796);
+            Controls.Add(sepetButton);
+            Controls.Add(bakiyeLabel);
+            Controls.Add(label5);
             Controls.Add(oyunuGorButton);
             Controls.Add(label4);
             Controls.Add(button1);
@@ -159,5 +195,8 @@ namespace XteamVeriTabani
         private Button button1;
         private Label label4;
         private Button oyunuGorButton;
+        private Label label5;
+        private Label bakiyeLabel;
+        private Button sepetButton;
     }
 }

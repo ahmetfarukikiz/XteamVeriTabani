@@ -8,14 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace XteamVeriTabani
+namespace XteamVeriTabani.Formlar
 {
-    public partial class HesapForm : Form
+    public partial class SatinAlimlarForm : Form
     {
-        public HesapForm()
+        public SatinAlimlarForm()
         {
             InitializeComponent();
         }
-
     }
 }

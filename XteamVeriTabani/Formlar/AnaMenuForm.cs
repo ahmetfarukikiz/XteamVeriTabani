@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using XteamVeriTabani.Formlar;
 
 namespace XteamVeriTabani
 {
@@ -74,8 +75,28 @@ namespace XteamVeriTabani
 
         private void cikisButton_Click(object sender, EventArgs e)
         {
+            Application.Exit();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
             this.Close();
         }
 
+        private void uygulamadanCikisBtn_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void satinAlimlarButton_Click(object sender, EventArgs e)
+        {
+            SatinAlimlarForm sa = new SatinAlimlarForm();
+            sa.Opacity = 0;
+            sa.Show();
+            sa.Location = this.Location;
+            sa.Opacity = 1;
+            sa.FormClosed += (s, args) => this.Show(); //kapandığında AnaMenuyu tekrar göstericek
+            this.Hide();
+        }
     }
 }

@@ -153,6 +153,7 @@
             Controls.Add(label3);
             Controls.Add(hesapAdiLabel);
             FormBorderStyle = FormBorderStyle.Fixed3D;
+            MaximizeBox = false;
             MinimizeBox = false;
             Name = "ProfilMenuForm";
             StartPosition = FormStartPosition.CenterScreen;

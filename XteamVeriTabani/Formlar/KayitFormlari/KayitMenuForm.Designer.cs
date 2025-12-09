@@ -58,23 +58,24 @@
             // 
             // girisYapButton
             // 
-            girisYapButton.Location = new Point(158, 287);
+            girisYapButton.Location = new Point(165, 305);
             girisYapButton.Name = "girisYapButton";
             girisYapButton.Size = new Size(295, 33);
             girisYapButton.TabIndex = 0;
             girisYapButton.Text = "Giriş Yap";
             girisYapButton.UseVisualStyleBackColor = true;
+            girisYapButton.Click += girisYapButton_Click;
             // 
             // kullaniciTextBox
             // 
-            kullaniciTextBox.Location = new Point(158, 178);
+            kullaniciTextBox.Location = new Point(165, 196);
             kullaniciTextBox.Name = "kullaniciTextBox";
             kullaniciTextBox.Size = new Size(295, 27);
             kullaniciTextBox.TabIndex = 1;
             // 
             // sifreTextBox
             // 
-            sifreTextBox.Location = new Point(158, 239);
+            sifreTextBox.Location = new Point(165, 257);
             sifreTextBox.Name = "sifreTextBox";
             sifreTextBox.Size = new Size(295, 27);
             sifreTextBox.TabIndex = 2;
@@ -82,7 +83,7 @@
             // kullaniciadLabel
             // 
             kullaniciadLabel.AutoSize = true;
-            kullaniciadLabel.Location = new Point(158, 155);
+            kullaniciadLabel.Location = new Point(165, 173);
             kullaniciadLabel.Name = "kullaniciadLabel";
             kullaniciadLabel.Size = new Size(92, 20);
             kullaniciadLabel.TabIndex = 3;
@@ -91,7 +92,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(158, 216);
+            label1.Location = new Point(165, 234);
             label1.Name = "label1";
             label1.Size = new Size(39, 20);
             label1.TabIndex = 4;
@@ -118,7 +119,7 @@
             tabPage1.Location = new Point(4, 29);
             tabPage1.Name = "tabPage1";
             tabPage1.Padding = new Padding(3);
-            tabPage1.Size = new Size(644, 548);
+            tabPage1.Size = new Size(644, 559);
             tabPage1.TabIndex = 0;
             tabPage1.Text = "Giriş Yap";
             tabPage1.UseVisualStyleBackColor = true;
