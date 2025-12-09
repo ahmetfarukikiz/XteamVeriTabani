@@ -12,7 +12,7 @@ namespace XteamVeriTabani.Formlar.KutuphaneFormlari
 {
     public partial class KutuphaneOyunForm : Form
     {
-        public KutuphaneOyunForm()
+        public KutuphaneOyunForm(int oyunID)
         {
             InitializeComponent();
         }

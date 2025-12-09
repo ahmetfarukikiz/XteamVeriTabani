@@ -30,6 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(KutuphaneOyunForm));
             groupBox1 = new GroupBox();
+            durumLabel = new Label();
+            label7 = new Label();
+            label2 = new Label();
+            dilListBox = new ListBox();
+            alinmaTarihiLabel = new Label();
+            label4 = new Label();
+            label5 = new Label();
+            oynamaSuresiLabel = new Label();
             yuklemeBoyutuLabel = new Label();
             label6 = new Label();
             label3 = new Label();
@@ -40,21 +48,17 @@
             pictureBox1 = new PictureBox();
             oyunBaslikLabel = new Label();
             oyunuAcButton = new Button();
-            alinmaTarihiLabel = new Label();
-            label4 = new Label();
-            label5 = new Label();
-            oynamaSuresiLabel = new Label();
-            dilListBox = new ListBox();
-            label2 = new Label();
-            label7 = new Label();
-            durumLabel = new Label();
+            label8 = new Label();
+            kategoriListBox = new ListBox();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(label8);
             groupBox1.Controls.Add(durumLabel);
+            groupBox1.Controls.Add(kategoriListBox);
             groupBox1.Controls.Add(label7);
             groupBox1.Controls.Add(label2);
             groupBox1.Controls.Add(dilListBox);
@@ -73,6 +77,87 @@
             groupBox1.Size = new Size(468, 547);
             groupBox1.TabIndex = 14;
             groupBox1.TabStop = false;
+            // 
+            // durumLabel
+            // 
+            durumLabel.AutoSize = true;
+            durumLabel.Font = new Font("Segoe UI", 12F);
+            durumLabel.ForeColor = Color.DimGray;
+            durumLabel.Location = new Point(290, 344);
+            durumLabel.Name = "durumLabel";
+            durumLabel.Size = new Size(108, 28);
+            durumLabel.TabIndex = 22;
+            durumLabel.Text = "yüklü değil";
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Segoe UI", 12F);
+            label7.Location = new Point(28, 344);
+            label7.Name = "label7";
+            label7.Size = new Size(87, 28);
+            label7.TabIndex = 21;
+            label7.Text = "Durumu:";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 12F);
+            label2.Location = new Point(28, 386);
+            label2.Name = "label2";
+            label2.Size = new Size(173, 28);
+            label2.TabIndex = 20;
+            label2.Text = "Desteklenen Diller:";
+            // 
+            // dilListBox
+            // 
+            dilListBox.FormattingEnabled = true;
+            dilListBox.Location = new Point(28, 417);
+            dilListBox.Name = "dilListBox";
+            dilListBox.Size = new Size(173, 104);
+            dilListBox.TabIndex = 19;
+            // 
+            // alinmaTarihiLabel
+            // 
+            alinmaTarihiLabel.AutoSize = true;
+            alinmaTarihiLabel.Font = new Font("Segoe UI", 12F);
+            alinmaTarihiLabel.ForeColor = Color.DimGray;
+            alinmaTarihiLabel.Location = new Point(290, 316);
+            alinmaTarihiLabel.Name = "alinmaTarihiLabel";
+            alinmaTarihiLabel.Size = new Size(86, 28);
+            alinmaTarihiLabel.TabIndex = 18;
+            alinmaTarihiLabel.Text = "12.22.22";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 12F);
+            label4.Location = new Point(28, 316);
+            label4.Name = "label4";
+            label4.Size = new Size(128, 28);
+            label4.TabIndex = 17;
+            label4.Text = "Alınma Tarihi:";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 12F);
+            label5.Location = new Point(28, 288);
+            label5.Name = "label5";
+            label5.Size = new Size(146, 28);
+            label5.TabIndex = 16;
+            label5.Text = "Oynama Süresi:";
+            // 
+            // oynamaSuresiLabel
+            // 
+            oynamaSuresiLabel.AutoSize = true;
+            oynamaSuresiLabel.Font = new Font("Segoe UI", 12F);
+            oynamaSuresiLabel.ForeColor = Color.DimGray;
+            oynamaSuresiLabel.Location = new Point(290, 288);
+            oynamaSuresiLabel.Name = "oynamaSuresiLabel";
+            oynamaSuresiLabel.Size = new Size(56, 28);
+            oynamaSuresiLabel.TabIndex = 15;
+            oynamaSuresiLabel.Text = "12dk";
             // 
             // yuklemeBoyutuLabel
             // 
@@ -174,92 +259,29 @@
             oyunuAcButton.Text = "Aç";
             oyunuAcButton.UseVisualStyleBackColor = true;
             // 
-            // alinmaTarihiLabel
+            // label8
             // 
-            alinmaTarihiLabel.AutoSize = true;
-            alinmaTarihiLabel.Font = new Font("Segoe UI", 12F);
-            alinmaTarihiLabel.ForeColor = Color.DimGray;
-            alinmaTarihiLabel.Location = new Point(290, 316);
-            alinmaTarihiLabel.Name = "alinmaTarihiLabel";
-            alinmaTarihiLabel.Size = new Size(86, 28);
-            alinmaTarihiLabel.TabIndex = 18;
-            alinmaTarihiLabel.Text = "12.22.22";
+            label8.AutoSize = true;
+            label8.Font = new Font("Segoe UI", 12F);
+            label8.Location = new Point(216, 386);
+            label8.Name = "label8";
+            label8.Size = new Size(113, 28);
+            label8.TabIndex = 26;
+            label8.Text = "Kategoriler:";
             // 
-            // label4
+            // kategoriListBox
             // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 12F);
-            label4.Location = new Point(28, 316);
-            label4.Name = "label4";
-            label4.Size = new Size(128, 28);
-            label4.TabIndex = 17;
-            label4.Text = "Alınma Tarihi:";
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 12F);
-            label5.Location = new Point(28, 288);
-            label5.Name = "label5";
-            label5.Size = new Size(146, 28);
-            label5.TabIndex = 16;
-            label5.Text = "Oynama Süresi:";
-            // 
-            // oynamaSuresiLabel
-            // 
-            oynamaSuresiLabel.AutoSize = true;
-            oynamaSuresiLabel.Font = new Font("Segoe UI", 12F);
-            oynamaSuresiLabel.ForeColor = Color.DimGray;
-            oynamaSuresiLabel.Location = new Point(290, 288);
-            oynamaSuresiLabel.Name = "oynamaSuresiLabel";
-            oynamaSuresiLabel.Size = new Size(56, 28);
-            oynamaSuresiLabel.TabIndex = 15;
-            oynamaSuresiLabel.Text = "12dk";
-            // 
-            // dilListBox
-            // 
-            dilListBox.FormattingEnabled = true;
-            dilListBox.Location = new Point(28, 417);
-            dilListBox.Name = "dilListBox";
-            dilListBox.Size = new Size(411, 104);
-            dilListBox.TabIndex = 19;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 12F);
-            label2.Location = new Point(28, 386);
-            label2.Name = "label2";
-            label2.Size = new Size(173, 28);
-            label2.TabIndex = 20;
-            label2.Text = "Desteklenen Diller:";
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Segoe UI", 12F);
-            label7.Location = new Point(28, 344);
-            label7.Name = "label7";
-            label7.Size = new Size(87, 28);
-            label7.TabIndex = 21;
-            label7.Text = "Durumu:";
-            // 
-            // durumLabel
-            // 
-            durumLabel.AutoSize = true;
-            durumLabel.Font = new Font("Segoe UI", 12F);
-            durumLabel.ForeColor = Color.DimGray;
-            durumLabel.Location = new Point(290, 344);
-            durumLabel.Name = "durumLabel";
-            durumLabel.Size = new Size(108, 28);
-            durumLabel.TabIndex = 22;
-            durumLabel.Text = "yüklü değil";
+            kategoriListBox.FormattingEnabled = true;
+            kategoriListBox.Location = new Point(216, 417);
+            kategoriListBox.Name = "kategoriListBox";
+            kategoriListBox.Size = new Size(235, 104);
+            kategoriListBox.TabIndex = 25;
             // 
             // KutuphaneOyunForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1064, 679);
+            ClientSize = new Size(1118, 679);
             Controls.Add(oyunuAcButton);
             Controls.Add(groupBox1);
             Controls.Add(oyunuYukleSilButton);
@@ -295,5 +317,7 @@
         private ListBox dilListBox;
         private Label label7;
         private Label durumLabel;
+        private Label label8;
+        private ListBox kategoriListBox;
     }
 }

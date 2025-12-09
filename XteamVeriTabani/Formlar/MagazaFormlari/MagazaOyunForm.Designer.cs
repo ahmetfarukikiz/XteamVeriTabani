@@ -37,6 +37,9 @@
             gelistiriciLabel = new Label();
             label1 = new Label();
             groupBox1 = new GroupBox();
+            label7 = new Label();
+            kategoriListBox = new ListBox();
+            label5 = new Label();
             yuklemeBoyutuLabel = new Label();
             label6 = new Label();
             indirilmeSayisiLabel = new Label();
@@ -45,8 +48,6 @@
             label3 = new Label();
             label2 = new Label();
             kampanyaLabel = new Label();
-            geriButton = new Button();
-            label5 = new Label();
             dilListBox = new ListBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             groupBox1.SuspendLayout();
@@ -56,7 +57,7 @@
             // 
             oyunBaslikLabel.AutoSize = true;
             oyunBaslikLabel.Font = new Font("Segoe UI", 22F);
-            oyunBaslikLabel.Location = new Point(94, 112);
+            oyunBaslikLabel.Location = new Point(64, 107);
             oyunBaslikLabel.Name = "oyunBaslikLabel";
             oyunBaslikLabel.Size = new Size(335, 50);
             oyunBaslikLabel.TabIndex = 0;
@@ -65,7 +66,7 @@
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(94, 226);
+            pictureBox1.Location = new Point(64, 221);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(339, 249);
             pictureBox1.TabIndex = 1;
@@ -83,7 +84,7 @@
             // 
             oyunFiyatLabel.AutoSize = true;
             oyunFiyatLabel.Font = new Font("Segoe UI", 20F);
-            oyunFiyatLabel.Location = new Point(94, 488);
+            oyunFiyatLabel.Location = new Point(64, 483);
             oyunFiyatLabel.Name = "oyunFiyatLabel";
             oyunFiyatLabel.Size = new Size(99, 46);
             oyunFiyatLabel.TabIndex = 4;
@@ -92,7 +93,7 @@
             // sepeteEkleButton
             // 
             sepeteEkleButton.Font = new Font("Segoe UI", 12F);
-            sepeteEkleButton.Location = new Point(199, 488);
+            sepeteEkleButton.Location = new Point(169, 483);
             sepeteEkleButton.Name = "sepeteEkleButton";
             sepeteEkleButton.Size = new Size(234, 46);
             sepeteEkleButton.TabIndex = 5;
@@ -122,6 +123,8 @@
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(label7);
+            groupBox1.Controls.Add(kategoriListBox);
             groupBox1.Controls.Add(label5);
             groupBox1.Controls.Add(dilListBox);
             groupBox1.Controls.Add(yuklemeBoyutuLabel);
@@ -134,11 +137,39 @@
             groupBox1.Controls.Add(label1);
             groupBox1.Controls.Add(oyunAciklamaRTB);
             groupBox1.Controls.Add(gelistiriciLabel);
-            groupBox1.Location = new Point(490, 112);
+            groupBox1.Location = new Point(460, 107);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(468, 513);
+            groupBox1.Size = new Size(556, 634);
             groupBox1.TabIndex = 8;
             groupBox1.TabStop = false;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Segoe UI", 12F);
+            label7.Location = new Point(26, 493);
+            label7.Name = "label7";
+            label7.Size = new Size(109, 28);
+            label7.TabIndex = 24;
+            label7.Text = "Kategoriler";
+            // 
+            // kategoriListBox
+            // 
+            kategoriListBox.FormattingEnabled = true;
+            kategoriListBox.Location = new Point(26, 524);
+            kategoriListBox.Name = "kategoriListBox";
+            kategoriListBox.Size = new Size(235, 104);
+            kategoriListBox.TabIndex = 23;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 12F);
+            label5.Location = new Point(28, 355);
+            label5.Name = "label5";
+            label5.Size = new Size(173, 28);
+            label5.TabIndex = 22;
+            label5.Text = "Desteklenen Diller:";
             // 
             // yuklemeBoyutuLabel
             // 
@@ -218,46 +249,26 @@
             kampanyaLabel.AutoSize = true;
             kampanyaLabel.BackColor = Color.Transparent;
             kampanyaLabel.Font = new Font("Segoe UI", 15F);
-            kampanyaLabel.Location = new Point(108, 425);
+            kampanyaLabel.Location = new Point(78, 420);
             kampanyaLabel.Name = "kampanyaLabel";
             kampanyaLabel.Size = new Size(163, 35);
             kampanyaLabel.TabIndex = 9;
             kampanyaLabel.Text = "%50 INDIRIM";
             kampanyaLabel.Visible = false;
             // 
-            // geriButton
-            // 
-            geriButton.Location = new Point(12, 12);
-            geriButton.Name = "geriButton";
-            geriButton.Size = new Size(63, 42);
-            geriButton.TabIndex = 10;
-            geriButton.Text = "<--";
-            geriButton.UseVisualStyleBackColor = true;
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 12F);
-            label5.Location = new Point(28, 355);
-            label5.Name = "label5";
-            label5.Size = new Size(173, 28);
-            label5.TabIndex = 22;
-            label5.Text = "Desteklenen Diller:";
-            // 
             // dilListBox
             // 
             dilListBox.FormattingEnabled = true;
             dilListBox.Location = new Point(28, 386);
             dilListBox.Name = "dilListBox";
-            dilListBox.Size = new Size(411, 104);
+            dilListBox.Size = new Size(235, 104);
             dilListBox.TabIndex = 21;
             // 
             // MagazaOyunForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1048, 701);
-            Controls.Add(geriButton);
+            ClientSize = new Size(1113, 753);
             Controls.Add(kampanyaLabel);
             Controls.Add(groupBox1);
             Controls.Add(sepeteEkleButton);
@@ -291,8 +302,9 @@
         private Label kampanyaLabel;
         private Label label6;
         private Label yuklemeBoyutuLabel;
-        private Button geriButton;
         private Label label5;
+        private Label label7;
+        private ListBox kategoriListBox;
         private ListBox dilListBox;
     }
 }

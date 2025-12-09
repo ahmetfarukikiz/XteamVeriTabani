@@ -12,7 +12,7 @@ namespace XteamVeriTabani.Formlar
 {
     public partial class MagazaOyunForm : Form
     {
-        public MagazaOyunForm()
+        public MagazaOyunForm(int OyunID)
         {
             InitializeComponent();
         }

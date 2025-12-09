@@ -16,5 +16,10 @@ namespace XteamVeriTabani
         {
             InitializeComponent();
         }
+
+        private void ProfilMenuForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

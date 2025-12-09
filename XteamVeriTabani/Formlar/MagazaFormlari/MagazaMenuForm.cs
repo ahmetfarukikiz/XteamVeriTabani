@@ -30,7 +30,7 @@ namespace XteamVeriTabani
 
         private void oyunuGorButton_Click(object sender, EventArgs e)
         {
-            MagazaOyunForm magazaOyunForm = new MagazaOyunForm(/*buraya oyunun kendisi veya özellikleri parametre olarak gidicek*/);
+            MagazaOyunForm magazaOyunForm = new MagazaOyunForm(/*buraya oyunun kendisi veya özellikleri parametre olarak gidicek*/0);
             magazaOyunForm.ShowDialog();
         }
     }
