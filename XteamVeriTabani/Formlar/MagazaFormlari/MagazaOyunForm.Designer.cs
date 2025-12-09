@@ -46,6 +46,8 @@
             label2 = new Label();
             kampanyaLabel = new Label();
             geriButton = new Button();
+            label5 = new Label();
+            dilListBox = new ListBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             groupBox1.SuspendLayout();
             SuspendLayout();
@@ -120,6 +122,8 @@
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(label5);
+            groupBox1.Controls.Add(dilListBox);
             groupBox1.Controls.Add(yuklemeBoyutuLabel);
             groupBox1.Controls.Add(label6);
             groupBox1.Controls.Add(indirilmeSayisiLabel);
@@ -132,7 +136,7 @@
             groupBox1.Controls.Add(gelistiriciLabel);
             groupBox1.Location = new Point(490, 112);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(468, 422);
+            groupBox1.Size = new Size(468, 513);
             groupBox1.TabIndex = 8;
             groupBox1.TabStop = false;
             // 
@@ -230,11 +234,29 @@
             geriButton.Text = "<--";
             geriButton.UseVisualStyleBackColor = true;
             // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 12F);
+            label5.Location = new Point(28, 355);
+            label5.Name = "label5";
+            label5.Size = new Size(173, 28);
+            label5.TabIndex = 22;
+            label5.Text = "Desteklenen Diller:";
+            // 
+            // dilListBox
+            // 
+            dilListBox.FormattingEnabled = true;
+            dilListBox.Location = new Point(28, 386);
+            dilListBox.Name = "dilListBox";
+            dilListBox.Size = new Size(411, 104);
+            dilListBox.TabIndex = 21;
+            // 
             // MagazaOyunForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1037, 657);
+            ClientSize = new Size(1048, 701);
             Controls.Add(geriButton);
             Controls.Add(kampanyaLabel);
             Controls.Add(groupBox1);
@@ -270,5 +292,7 @@
         private Label label6;
         private Label yuklemeBoyutuLabel;
         private Button geriButton;
+        private Label label5;
+        private ListBox dilListBox;
     }
 }
