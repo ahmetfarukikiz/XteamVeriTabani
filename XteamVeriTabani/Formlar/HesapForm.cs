@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace XteamVeriTabani
 {
-    public partial class AyarlarForm : Form
+    public partial class HesapForm : Form
     {
-        public AyarlarForm()
+        public HesapForm()
         {
             InitializeComponent();
         }

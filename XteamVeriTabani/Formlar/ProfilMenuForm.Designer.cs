@@ -1,6 +1,6 @@
 ﻿namespace XteamVeriTabani
 {
-    partial class HesapMenuForm
+    partial class ProfilMenuForm
     {
         /// <summary>
         /// Required designer variable.

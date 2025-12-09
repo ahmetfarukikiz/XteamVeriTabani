@@ -50,26 +50,31 @@ namespace XteamVeriTabani
             this.Hide();
         }
 
-        private void hesapButton_Click(object sender, EventArgs e)
+        private void profilButton_Click(object sender, EventArgs e)
         {
-            HesapMenuForm h = new HesapMenuForm();
-            h.Opacity = 0;
-            h.Show();
-            h.Location = this.Location;
-            h.Opacity = 1;
-            h.FormClosed += (s, args) => this.Show(); //kapandığında AnaMenuyu tekrar göstericek
+            ProfilMenuForm pr = new ProfilMenuForm();
+            pr.Opacity = 0;
+            pr.Show();
+            pr.Location = this.Location;
+            pr.Opacity = 1;
+            pr.FormClosed += (s, args) => this.Show(); //kapandığında AnaMenuyu tekrar göstericek
             this.Hide();
         }
 
-        private void ayarlarButton_Click(object sender, EventArgs e)
+        private void hesapButton_Click(object sender, EventArgs e)
         {
-            AyarlarForm ay = new AyarlarForm();
-            ay.Opacity = 0;
-            ay.Show();
-            ay.Location = this.Location;
-            ay.Opacity = 1;
-            ay.FormClosed += (s, args) => this.Show(); //kapandığında AnaMenuyu tekrar göstericek
+            HesapForm he = new HesapForm();
+            he.Opacity = 0;
+            he.Show();
+            he.Location = this.Location;
+            he.Opacity = 1;
+            he.FormClosed += (s, args) => this.Show(); //kapandığında AnaMenuyu tekrar göstericek
             this.Hide();
+        }
+
+        private void cikisButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
     }

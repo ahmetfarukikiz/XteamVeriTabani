@@ -1,6 +1,6 @@
 ﻿namespace XteamVeriTabani
 {
-    partial class AyarlarForm
+    partial class HesapForm
     {
         /// <summary>
         /// Required designer variable.

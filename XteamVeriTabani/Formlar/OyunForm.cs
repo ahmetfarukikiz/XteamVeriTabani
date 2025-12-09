@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace XteamVeriTabani
+namespace XteamVeriTabani.Formlar
 {
-    public partial class HesapMenuForm : Form
+    public partial class OyunForm : Form
     {
-        public HesapMenuForm()
+        public OyunForm()
         {
             InitializeComponent();
         }
