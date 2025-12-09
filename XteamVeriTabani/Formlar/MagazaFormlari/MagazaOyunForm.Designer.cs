@@ -1,6 +1,6 @@
 ﻿namespace XteamVeriTabani.Formlar
 {
-    partial class OyunForm
+    partial class MagazaOyunForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OyunForm));
-            oyunAdiLabel = new Label();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MagazaOyunForm));
+            oyunBaslikLabel = new Label();
             pictureBox1 = new PictureBox();
             oyunAciklamaRTB = new RichTextBox();
             oyunFiyatLabel = new Label();
@@ -37,33 +37,33 @@
             gelistiriciLabel = new Label();
             label1 = new Label();
             groupBox1 = new GroupBox();
-            label2 = new Label();
-            label3 = new Label();
-            cikisTarihiLabel = new Label();
-            label4 = new Label();
-            indirilmeSayisiLabel = new Label();
-            kampanyaLabel = new Label();
-            label6 = new Label();
             yuklemeBoyutuLabel = new Label();
+            label6 = new Label();
+            indirilmeSayisiLabel = new Label();
+            label4 = new Label();
+            cikisTarihiLabel = new Label();
+            label3 = new Label();
+            label2 = new Label();
+            kampanyaLabel = new Label();
             geriButton = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
-            // oyunAdiLabel
+            // oyunBaslikLabel
             // 
-            oyunAdiLabel.AutoSize = true;
-            oyunAdiLabel.Font = new Font("Segoe UI", 22F);
-            oyunAdiLabel.Location = new Point(69, 134);
-            oyunAdiLabel.Name = "oyunAdiLabel";
-            oyunAdiLabel.Size = new Size(335, 50);
-            oyunAdiLabel.TabIndex = 0;
-            oyunAdiLabel.Text = "League Of Legends";
+            oyunBaslikLabel.AutoSize = true;
+            oyunBaslikLabel.Font = new Font("Segoe UI", 22F);
+            oyunBaslikLabel.Location = new Point(94, 112);
+            oyunBaslikLabel.Name = "oyunBaslikLabel";
+            oyunBaslikLabel.Size = new Size(335, 50);
+            oyunBaslikLabel.TabIndex = 0;
+            oyunBaslikLabel.Text = "League Of Legends";
             // 
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(69, 207);
+            pictureBox1.Location = new Point(94, 226);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(339, 249);
             pictureBox1.TabIndex = 1;
@@ -81,7 +81,7 @@
             // 
             oyunFiyatLabel.AutoSize = true;
             oyunFiyatLabel.Font = new Font("Segoe UI", 20F);
-            oyunFiyatLabel.Location = new Point(69, 469);
+            oyunFiyatLabel.Location = new Point(94, 488);
             oyunFiyatLabel.Name = "oyunFiyatLabel";
             oyunFiyatLabel.Size = new Size(99, 46);
             oyunFiyatLabel.TabIndex = 4;
@@ -89,10 +89,10 @@
             // 
             // sepeteEkleButton
             // 
-            sepeteEkleButton.Font = new Font("Segoe UI", 10F);
-            sepeteEkleButton.Location = new Point(174, 475);
+            sepeteEkleButton.Font = new Font("Segoe UI", 12F);
+            sepeteEkleButton.Location = new Point(199, 488);
             sepeteEkleButton.Name = "sepeteEkleButton";
-            sepeteEkleButton.Size = new Size(121, 40);
+            sepeteEkleButton.Size = new Size(234, 46);
             sepeteEkleButton.TabIndex = 5;
             sepeteEkleButton.Text = "Sepete Ekle";
             sepeteEkleButton.UseVisualStyleBackColor = true;
@@ -130,85 +130,11 @@
             groupBox1.Controls.Add(label1);
             groupBox1.Controls.Add(oyunAciklamaRTB);
             groupBox1.Controls.Add(gelistiriciLabel);
-            groupBox1.Location = new Point(463, 153);
+            groupBox1.Location = new Point(490, 112);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(468, 362);
+            groupBox1.Size = new Size(468, 422);
             groupBox1.TabIndex = 8;
             groupBox1.TabStop = false;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 12F);
-            label2.Location = new Point(28, 260);
-            label2.Name = "label2";
-            label2.Size = new Size(107, 28);
-            label2.TabIndex = 8;
-            label2.Text = "Çıkış Tarihi:";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 12F);
-            label3.Location = new Point(28, 35);
-            label3.Name = "label3";
-            label3.Size = new Size(150, 28);
-            label3.TabIndex = 9;
-            label3.Text = "Oyun Hakkında:";
-            // 
-            // cikisTarihiLabel
-            // 
-            cikisTarihiLabel.AutoSize = true;
-            cikisTarihiLabel.Font = new Font("Segoe UI", 12F);
-            cikisTarihiLabel.ForeColor = Color.DimGray;
-            cikisTarihiLabel.Location = new Point(290, 260);
-            cikisTarihiLabel.Name = "cikisTarihiLabel";
-            cikisTarihiLabel.Size = new Size(108, 28);
-            cikisTarihiLabel.TabIndex = 10;
-            cikisTarihiLabel.Text = "23.11.2023";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 12F);
-            label4.Location = new Point(28, 288);
-            label4.Name = "label4";
-            label4.Size = new Size(147, 28);
-            label4.TabIndex = 11;
-            label4.Text = "İndirilme Sayısı:";
-            // 
-            // indirilmeSayisiLabel
-            // 
-            indirilmeSayisiLabel.AutoSize = true;
-            indirilmeSayisiLabel.Font = new Font("Segoe UI", 12F);
-            indirilmeSayisiLabel.ForeColor = Color.DimGray;
-            indirilmeSayisiLabel.Location = new Point(290, 288);
-            indirilmeSayisiLabel.Name = "indirilmeSayisiLabel";
-            indirilmeSayisiLabel.Size = new Size(71, 28);
-            indirilmeSayisiLabel.TabIndex = 12;
-            indirilmeSayisiLabel.Text = "12.000";
-            // 
-            // kampanyaLabel
-            // 
-            kampanyaLabel.AutoSize = true;
-            kampanyaLabel.BackColor = Color.Transparent;
-            kampanyaLabel.Font = new Font("Segoe UI", 15F);
-            kampanyaLabel.Location = new Point(83, 406);
-            kampanyaLabel.Name = "kampanyaLabel";
-            kampanyaLabel.Size = new Size(163, 35);
-            kampanyaLabel.TabIndex = 9;
-            kampanyaLabel.Text = "%50 INDIRIM";
-            kampanyaLabel.Visible = false;
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Segoe UI", 12F);
-            label6.Location = new Point(28, 316);
-            label6.Name = "label6";
-            label6.Size = new Size(157, 28);
-            label6.TabIndex = 13;
-            label6.Text = "Yükleme Boyutu:";
             // 
             // yuklemeBoyutuLabel
             // 
@@ -221,6 +147,80 @@
             yuklemeBoyutuLabel.TabIndex = 14;
             yuklemeBoyutuLabel.Text = "20GB";
             // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI", 12F);
+            label6.Location = new Point(28, 316);
+            label6.Name = "label6";
+            label6.Size = new Size(157, 28);
+            label6.TabIndex = 13;
+            label6.Text = "Yükleme Boyutu:";
+            // 
+            // indirilmeSayisiLabel
+            // 
+            indirilmeSayisiLabel.AutoSize = true;
+            indirilmeSayisiLabel.Font = new Font("Segoe UI", 12F);
+            indirilmeSayisiLabel.ForeColor = Color.DimGray;
+            indirilmeSayisiLabel.Location = new Point(290, 288);
+            indirilmeSayisiLabel.Name = "indirilmeSayisiLabel";
+            indirilmeSayisiLabel.Size = new Size(71, 28);
+            indirilmeSayisiLabel.TabIndex = 12;
+            indirilmeSayisiLabel.Text = "12.000";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 12F);
+            label4.Location = new Point(28, 288);
+            label4.Name = "label4";
+            label4.Size = new Size(147, 28);
+            label4.TabIndex = 11;
+            label4.Text = "İndirilme Sayısı:";
+            // 
+            // cikisTarihiLabel
+            // 
+            cikisTarihiLabel.AutoSize = true;
+            cikisTarihiLabel.Font = new Font("Segoe UI", 12F);
+            cikisTarihiLabel.ForeColor = Color.DimGray;
+            cikisTarihiLabel.Location = new Point(290, 260);
+            cikisTarihiLabel.Name = "cikisTarihiLabel";
+            cikisTarihiLabel.Size = new Size(108, 28);
+            cikisTarihiLabel.TabIndex = 10;
+            cikisTarihiLabel.Text = "23.11.2023";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 12F);
+            label3.Location = new Point(28, 35);
+            label3.Name = "label3";
+            label3.Size = new Size(150, 28);
+            label3.TabIndex = 9;
+            label3.Text = "Oyun Hakkında:";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 12F);
+            label2.Location = new Point(28, 260);
+            label2.Name = "label2";
+            label2.Size = new Size(107, 28);
+            label2.TabIndex = 8;
+            label2.Text = "Çıkış Tarihi:";
+            // 
+            // kampanyaLabel
+            // 
+            kampanyaLabel.AutoSize = true;
+            kampanyaLabel.BackColor = Color.Transparent;
+            kampanyaLabel.Font = new Font("Segoe UI", 15F);
+            kampanyaLabel.Location = new Point(108, 425);
+            kampanyaLabel.Name = "kampanyaLabel";
+            kampanyaLabel.Size = new Size(163, 35);
+            kampanyaLabel.TabIndex = 9;
+            kampanyaLabel.Text = "%50 INDIRIM";
+            kampanyaLabel.Visible = false;
+            // 
             // geriButton
             // 
             geriButton.Location = new Point(12, 12);
@@ -230,19 +230,19 @@
             geriButton.Text = "<--";
             geriButton.UseVisualStyleBackColor = true;
             // 
-            // OyunForm
+            // MagazaOyunForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(990, 666);
+            ClientSize = new Size(1037, 657);
             Controls.Add(geriButton);
             Controls.Add(kampanyaLabel);
             Controls.Add(groupBox1);
             Controls.Add(sepeteEkleButton);
             Controls.Add(oyunFiyatLabel);
             Controls.Add(pictureBox1);
-            Controls.Add(oyunAdiLabel);
-            Name = "OyunForm";
+            Controls.Add(oyunBaslikLabel);
+            Name = "MagazaOyunForm";
             Text = "OyunForm";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             groupBox1.ResumeLayout(false);
@@ -253,7 +253,7 @@
 
         #endregion
 
-        private Label oyunAdiLabel;
+        private Label oyunBaslikLabel;
         private PictureBox pictureBox1;
         private RichTextBox oyunAciklamaRTB;
         private Label oyunFiyatLabel;

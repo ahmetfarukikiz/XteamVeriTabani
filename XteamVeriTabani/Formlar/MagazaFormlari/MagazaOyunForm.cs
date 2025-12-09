@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace XteamVeriTabani.Formlar
 {
-    public partial class OyunForm : Form
+    public partial class MagazaOyunForm : Form
     {
-        public OyunForm()
+        public MagazaOyunForm()
         {
             InitializeComponent();
         }

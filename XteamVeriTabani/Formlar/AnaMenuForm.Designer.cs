@@ -42,9 +42,9 @@
             magazaButton.BackColor = Color.Azure;
             magazaButton.Font = new Font("Yu Gothic UI", 12F, FontStyle.Bold);
             magazaButton.ForeColor = Color.MidnightBlue;
-            magazaButton.Location = new Point(255, 327);
+            magazaButton.Location = new Point(171, 316);
             magazaButton.Name = "magazaButton";
-            magazaButton.Size = new Size(189, 87);
+            magazaButton.Size = new Size(252, 120);
             magazaButton.TabIndex = 0;
             magazaButton.Text = "Mağaza";
             magazaButton.UseVisualStyleBackColor = false;
@@ -55,9 +55,9 @@
             profilButton.BackColor = Color.Azure;
             profilButton.Font = new Font("Yu Gothic UI", 12F, FontStyle.Bold);
             profilButton.ForeColor = Color.MidnightBlue;
-            profilButton.Location = new Point(255, 430);
+            profilButton.Location = new Point(171, 459);
             profilButton.Name = "profilButton";
-            profilButton.Size = new Size(189, 87);
+            profilButton.Size = new Size(252, 120);
             profilButton.TabIndex = 2;
             profilButton.Text = "Profil";
             profilButton.UseVisualStyleBackColor = false;
@@ -68,9 +68,9 @@
             hesapButton.BackColor = Color.Azure;
             hesapButton.Font = new Font("Yu Gothic UI", 12F, FontStyle.Bold);
             hesapButton.ForeColor = Color.MidnightBlue;
-            hesapButton.Location = new Point(467, 430);
+            hesapButton.Location = new Point(455, 459);
             hesapButton.Name = "hesapButton";
-            hesapButton.Size = new Size(189, 87);
+            hesapButton.Size = new Size(252, 120);
             hesapButton.TabIndex = 3;
             hesapButton.Text = "Hesap";
             hesapButton.UseVisualStyleBackColor = false;
@@ -81,9 +81,9 @@
             arkadasButton.BackColor = Color.Azure;
             arkadasButton.Font = new Font("Yu Gothic UI", 12F, FontStyle.Bold);
             arkadasButton.ForeColor = Color.MidnightBlue;
-            arkadasButton.Location = new Point(674, 327);
+            arkadasButton.Location = new Point(740, 316);
             arkadasButton.Name = "arkadasButton";
-            arkadasButton.Size = new Size(189, 87);
+            arkadasButton.Size = new Size(252, 120);
             arkadasButton.TabIndex = 4;
             arkadasButton.Text = "Arkadaşlar";
             arkadasButton.UseVisualStyleBackColor = false;
@@ -92,11 +92,11 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI Historic", 30F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Font = new Font("Segoe UI Historic", 50F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = SystemColors.ActiveCaptionText;
-            label1.Location = new Point(255, 167);
+            label1.Location = new Point(171, 141);
             label1.Name = "label1";
-            label1.Size = new Size(175, 67);
+            label1.Size = new Size(285, 112);
             label1.TabIndex = 6;
             label1.Text = "Xteam";
             // 
@@ -105,9 +105,9 @@
             kutuphaneButton.BackColor = Color.Azure;
             kutuphaneButton.Font = new Font("Yu Gothic UI", 12F, FontStyle.Bold);
             kutuphaneButton.ForeColor = Color.MidnightBlue;
-            kutuphaneButton.Location = new Point(467, 327);
+            kutuphaneButton.Location = new Point(455, 316);
             kutuphaneButton.Name = "kutuphaneButton";
-            kutuphaneButton.Size = new Size(189, 87);
+            kutuphaneButton.Size = new Size(252, 120);
             kutuphaneButton.TabIndex = 7;
             kutuphaneButton.Text = "Kütüphane";
             kutuphaneButton.UseVisualStyleBackColor = false;
@@ -118,9 +118,9 @@
             cikisButton.BackColor = Color.Azure;
             cikisButton.Font = new Font("Yu Gothic UI", 12F, FontStyle.Bold);
             cikisButton.ForeColor = Color.MidnightBlue;
-            cikisButton.Location = new Point(674, 430);
+            cikisButton.Location = new Point(740, 459);
             cikisButton.Name = "cikisButton";
-            cikisButton.Size = new Size(189, 87);
+            cikisButton.Size = new Size(252, 120);
             cikisButton.TabIndex = 8;
             cikisButton.Text = "Çıkış";
             cikisButton.UseVisualStyleBackColor = false;
