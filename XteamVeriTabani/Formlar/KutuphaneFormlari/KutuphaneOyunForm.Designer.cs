@@ -50,6 +50,7 @@
             pictureBox1 = new PictureBox();
             oyunBaslikLabel = new Label();
             oyunuAcButton = new Button();
+            iadeEtButton = new Button();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -74,15 +75,16 @@
             groupBox1.Controls.Add(gelistiriciLabel);
             groupBox1.Location = new Point(466, 73);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(468, 547);
+            groupBox1.Size = new Size(582, 547);
             groupBox1.TabIndex = 14;
             groupBox1.TabStop = false;
+            groupBox1.Enter += groupBox1_Enter;
             // 
             // label8
             // 
             label8.AutoSize = true;
             label8.Font = new Font("Segoe UI", 12F);
-            label8.Location = new Point(216, 386);
+            label8.Location = new Point(299, 386);
             label8.Name = "label8";
             label8.Size = new Size(113, 28);
             label8.TabIndex = 26;
@@ -102,9 +104,9 @@
             // kategoriListBox
             // 
             kategoriListBox.FormattingEnabled = true;
-            kategoriListBox.Location = new Point(216, 417);
+            kategoriListBox.Location = new Point(299, 417);
             kategoriListBox.Name = "kategoriListBox";
-            kategoriListBox.Size = new Size(235, 104);
+            kategoriListBox.Size = new Size(267, 104);
             kategoriListBox.TabIndex = 25;
             // 
             // label7
@@ -132,7 +134,7 @@
             dilListBox.FormattingEnabled = true;
             dilListBox.Location = new Point(28, 417);
             dilListBox.Name = "dilListBox";
-            dilListBox.Size = new Size(173, 104);
+            dilListBox.Size = new Size(265, 104);
             dilListBox.TabIndex = 19;
             // 
             // alinmaTarihiLabel
@@ -246,6 +248,7 @@
             oyunuYukleSilButton.TabIndex = 13;
             oyunuYukleSilButton.Text = "Yükle/Sil";
             oyunuYukleSilButton.UseVisualStyleBackColor = true;
+            oyunuYukleSilButton.Click += oyunuYukleSilButton_Click;
             // 
             // pictureBox1
             // 
@@ -276,12 +279,25 @@
             oyunuAcButton.TabIndex = 15;
             oyunuAcButton.Text = "Aç";
             oyunuAcButton.UseVisualStyleBackColor = true;
+            oyunuAcButton.Click += oyunuAcButton_Click;
+            // 
+            // iadeEtButton
+            // 
+            iadeEtButton.Font = new Font("Segoe UI", 12F);
+            iadeEtButton.Location = new Point(70, 574);
+            iadeEtButton.Name = "iadeEtButton";
+            iadeEtButton.Size = new Size(335, 46);
+            iadeEtButton.TabIndex = 16;
+            iadeEtButton.Text = "İade Et";
+            iadeEtButton.UseVisualStyleBackColor = true;
+            iadeEtButton.Click += iadeEtButton_Click;
             // 
             // KutuphaneOyunForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1118, 679);
+            Controls.Add(iadeEtButton);
             Controls.Add(oyunuAcButton);
             Controls.Add(groupBox1);
             Controls.Add(oyunuYukleSilButton);
@@ -292,6 +308,7 @@
             Name = "KutuphaneOyunForm";
             StartPosition = FormStartPosition.CenterParent;
             Text = "KutuphaneOyunForm";
+            Load += KutuphaneOyunForm_Load;
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
@@ -322,5 +339,6 @@
         private Label durumLabel;
         private Label label8;
         private ListBox kategoriListBox;
+        private Button iadeEtButton;
     }
 }

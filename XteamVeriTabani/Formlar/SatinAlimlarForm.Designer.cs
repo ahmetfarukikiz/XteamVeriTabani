@@ -35,9 +35,14 @@
             // 
             // satinAlimDGW
             // 
+            satinAlimDGW.AllowUserToAddRows = false;
+            satinAlimDGW.AllowUserToDeleteRows = false;
+            satinAlimDGW.AllowUserToResizeColumns = false;
+            satinAlimDGW.AllowUserToResizeRows = false;
             satinAlimDGW.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            satinAlimDGW.Location = new Point(79, 136);
+            satinAlimDGW.Location = new Point(79, 131);
             satinAlimDGW.Name = "satinAlimDGW";
+            satinAlimDGW.ReadOnly = true;
             satinAlimDGW.RowHeadersWidth = 51;
             satinAlimDGW.Size = new Size(836, 465);
             satinAlimDGW.TabIndex = 0;
@@ -64,6 +69,7 @@
             Name = "SatinAlimlarForm";
             StartPosition = FormStartPosition.CenterParent;
             Text = "SatinAlimlarForm";
+            Load += SatinAlimlarForm_Load;
             ((System.ComponentModel.ISupportInitialize)satinAlimDGW).EndInit();
             ResumeLayout(false);
             PerformLayout();

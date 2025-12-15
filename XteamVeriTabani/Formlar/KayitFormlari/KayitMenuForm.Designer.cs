@@ -36,20 +36,20 @@
             kayitMenusuTab = new TabControl();
             tabPage1 = new TabPage();
             kayitolTabPage = new TabPage();
-            textBox6 = new TextBox();
+            kwebsitesiTB = new TextBox();
             label8 = new Label();
-            textBox4 = new TextBox();
+            kverginoTB = new TextBox();
             label7 = new Label();
             label5 = new Label();
-            hesapTurComboBox = new ComboBox();
-            textBox2 = new TextBox();
-            textBox5 = new TextBox();
+            kturComboBox = new ComboBox();
+            ksifreTB = new TextBox();
+            kkullaniciadiTB = new TextBox();
             label6 = new Label();
-            textBox3 = new TextBox();
+            khesapadiTB = new TextBox();
             label4 = new Label();
-            button1 = new Button();
+            kayitOlButton = new Button();
             label2 = new Label();
-            textBox1 = new TextBox();
+            kepostaTB = new TextBox();
             label3 = new Label();
             kayitMenusuTab.SuspendLayout();
             tabPage1.SuspendLayout();
@@ -123,23 +123,24 @@
             tabPage1.TabIndex = 0;
             tabPage1.Text = "Giriş Yap";
             tabPage1.UseVisualStyleBackColor = true;
+            tabPage1.Click += tabPage1_Click;
             // 
             // kayitolTabPage
             // 
-            kayitolTabPage.Controls.Add(textBox6);
+            kayitolTabPage.Controls.Add(kwebsitesiTB);
             kayitolTabPage.Controls.Add(label8);
-            kayitolTabPage.Controls.Add(textBox4);
+            kayitolTabPage.Controls.Add(kverginoTB);
             kayitolTabPage.Controls.Add(label7);
             kayitolTabPage.Controls.Add(label5);
-            kayitolTabPage.Controls.Add(hesapTurComboBox);
-            kayitolTabPage.Controls.Add(textBox2);
-            kayitolTabPage.Controls.Add(textBox5);
+            kayitolTabPage.Controls.Add(kturComboBox);
+            kayitolTabPage.Controls.Add(ksifreTB);
+            kayitolTabPage.Controls.Add(kkullaniciadiTB);
             kayitolTabPage.Controls.Add(label6);
-            kayitolTabPage.Controls.Add(textBox3);
+            kayitolTabPage.Controls.Add(khesapadiTB);
             kayitolTabPage.Controls.Add(label4);
-            kayitolTabPage.Controls.Add(button1);
+            kayitolTabPage.Controls.Add(kayitOlButton);
             kayitolTabPage.Controls.Add(label2);
-            kayitolTabPage.Controls.Add(textBox1);
+            kayitolTabPage.Controls.Add(kepostaTB);
             kayitolTabPage.Controls.Add(label3);
             kayitolTabPage.Location = new Point(4, 29);
             kayitolTabPage.Name = "kayitolTabPage";
@@ -149,13 +150,13 @@
             kayitolTabPage.Text = "Kayıt Ol";
             kayitolTabPage.UseVisualStyleBackColor = true;
             // 
-            // textBox6
+            // kwebsitesiTB
             // 
-            textBox6.Enabled = false;
-            textBox6.Location = new Point(168, 436);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(295, 27);
-            textBox6.TabIndex = 22;
+            kwebsitesiTB.Enabled = false;
+            kwebsitesiTB.Location = new Point(168, 436);
+            kwebsitesiTB.Name = "kwebsitesiTB";
+            kwebsitesiTB.Size = new Size(295, 27);
+            kwebsitesiTB.TabIndex = 22;
             // 
             // label8
             // 
@@ -166,13 +167,13 @@
             label8.TabIndex = 21;
             label8.Text = "Websitesi (Geliştirici)";
             // 
-            // textBox4
+            // kverginoTB
             // 
-            textBox4.Enabled = false;
-            textBox4.Location = new Point(168, 368);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(295, 27);
-            textBox4.TabIndex = 20;
+            kverginoTB.Enabled = false;
+            kverginoTB.Location = new Point(168, 368);
+            kverginoTB.Name = "kverginoTB";
+            kverginoTB.Size = new Size(295, 27);
+            kverginoTB.TabIndex = 20;
             // 
             // label7
             // 
@@ -192,31 +193,32 @@
             label5.TabIndex = 18;
             label5.Text = "Hesap Türü:";
             // 
-            // hesapTurComboBox
+            // kturComboBox
             // 
-            hesapTurComboBox.DisplayMember = "Oyuncu";
-            hesapTurComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
-            hesapTurComboBox.FormattingEnabled = true;
-            hesapTurComboBox.Items.AddRange(new object[] { "Oyuncu", "Geliştirici" });
-            hesapTurComboBox.Location = new Point(168, 306);
-            hesapTurComboBox.Name = "hesapTurComboBox";
-            hesapTurComboBox.Size = new Size(295, 28);
-            hesapTurComboBox.TabIndex = 17;
-            hesapTurComboBox.ValueMember = "Oyuncu";
+            kturComboBox.DisplayMember = "Oyuncu";
+            kturComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
+            kturComboBox.FormattingEnabled = true;
+            kturComboBox.Items.AddRange(new object[] { "Oyuncu", "Geliştirici" });
+            kturComboBox.Location = new Point(168, 306);
+            kturComboBox.Name = "kturComboBox";
+            kturComboBox.Size = new Size(295, 28);
+            kturComboBox.TabIndex = 17;
+            kturComboBox.ValueMember = "Oyuncu";
+            kturComboBox.SelectedIndexChanged += kturComboBox_SelectedIndexChanged;
             // 
-            // textBox2
+            // ksifreTB
             // 
-            textBox2.Location = new Point(168, 242);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(295, 27);
-            textBox2.TabIndex = 16;
+            ksifreTB.Location = new Point(168, 242);
+            ksifreTB.Name = "ksifreTB";
+            ksifreTB.Size = new Size(295, 27);
+            ksifreTB.TabIndex = 16;
             // 
-            // textBox5
+            // kkullaniciadiTB
             // 
-            textBox5.Location = new Point(168, 181);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(295, 27);
-            textBox5.TabIndex = 14;
+            kkullaniciadiTB.Location = new Point(168, 181);
+            kkullaniciadiTB.Name = "kkullaniciadiTB";
+            kkullaniciadiTB.Size = new Size(295, 27);
+            kkullaniciadiTB.TabIndex = 14;
             // 
             // label6
             // 
@@ -227,12 +229,12 @@
             label6.TabIndex = 15;
             label6.Text = "Kullanıcı Adı";
             // 
-            // textBox3
+            // khesapadiTB
             // 
-            textBox3.Location = new Point(168, 116);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(295, 27);
-            textBox3.TabIndex = 10;
+            khesapadiTB.Location = new Point(168, 116);
+            khesapadiTB.Name = "khesapadiTB";
+            khesapadiTB.Size = new Size(295, 27);
+            khesapadiTB.TabIndex = 10;
             // 
             // label4
             // 
@@ -243,14 +245,15 @@
             label4.TabIndex = 11;
             label4.Text = "Hesap Adı (Görünen Ad)";
             // 
-            // button1
+            // kayitOlButton
             // 
-            button1.Location = new Point(168, 489);
-            button1.Name = "button1";
-            button1.Size = new Size(295, 37);
-            button1.TabIndex = 5;
-            button1.Text = "Kayıt Ol";
-            button1.UseVisualStyleBackColor = true;
+            kayitOlButton.Location = new Point(168, 489);
+            kayitOlButton.Name = "kayitOlButton";
+            kayitOlButton.Size = new Size(295, 37);
+            kayitOlButton.TabIndex = 5;
+            kayitOlButton.Text = "Kayıt Ol";
+            kayitOlButton.UseVisualStyleBackColor = true;
+            kayitOlButton.Click += kayitOlButton_Click;
             // 
             // label2
             // 
@@ -261,12 +264,12 @@
             label2.TabIndex = 9;
             label2.Text = "Şifre";
             // 
-            // textBox1
+            // kepostaTB
             // 
-            textBox1.Location = new Point(168, 49);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(295, 27);
-            textBox1.TabIndex = 6;
+            kepostaTB.Location = new Point(168, 49);
+            kepostaTB.Name = "kepostaTB";
+            kepostaTB.Size = new Size(295, 27);
+            kepostaTB.TabIndex = 6;
             // 
             // label3
             // 
@@ -288,6 +291,7 @@
             Name = "KayitMenuForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Xteam";
+            Load += KayitMenuForm_Load;
             kayitMenusuTab.ResumeLayout(false);
             tabPage1.ResumeLayout(false);
             tabPage1.PerformLayout();
@@ -306,20 +310,20 @@
         private TabControl kayitMenusuTab;
         private TabPage tabPage1;
         private TabPage kayitolTabPage;
-        private TextBox textBox5;
+        private TextBox kkullaniciadiTB;
         private Label label6;
-        private TextBox textBox3;
+        private TextBox khesapadiTB;
         private Label label4;
-        private Button button1;
+        private Button kayitOlButton;
         private Label label2;
-        private TextBox textBox1;
+        private TextBox kepostaTB;
         private Label label3;
-        private TextBox textBox2;
-        private ComboBox hesapTurComboBox;
+        private TextBox ksifreTB;
+        private ComboBox kturComboBox;
         private Label label5;
-        private TextBox textBox6;
+        private TextBox kwebsitesiTB;
         private Label label8;
-        private TextBox textBox4;
+        private TextBox kverginoTB;
         private Label label7;
     }
 }

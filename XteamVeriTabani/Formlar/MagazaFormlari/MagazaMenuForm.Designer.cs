@@ -31,16 +31,16 @@ namespace XteamVeriTabani
         {
             label1 = new Label();
             oyunlarListBox = new ListBox();
-            textBox1 = new TextBox();
+            oyunAdiTB = new TextBox();
             label2 = new Label();
-            comboBox1 = new ComboBox();
+            kategoriComboBox = new ComboBox();
             label3 = new Label();
-            button1 = new Button();
+            oyunuAraButton = new Button();
             label4 = new Label();
             oyunuGorButton = new Button();
-            label5 = new Label();
             bakiyeLabel = new Label();
             sepetButton = new Button();
+            bakiyeEkleButton = new Button();
             SuspendLayout();
             // 
             // label1
@@ -60,14 +60,15 @@ namespace XteamVeriTabani
             oyunlarListBox.Name = "oyunlarListBox";
             oyunlarListBox.Size = new Size(1067, 544);
             oyunlarListBox.TabIndex = 1;
+            oyunlarListBox.SelectedIndexChanged += oyunlarListBox_SelectedIndexChanged;
             oyunlarListBox.MouseDoubleClick += oyunlarListBox_MouseDoubleClick;
             // 
-            // textBox1
+            // oyunAdiTB
             // 
-            textBox1.Location = new Point(250, 125);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(160, 27);
-            textBox1.TabIndex = 2;
+            oyunAdiTB.Location = new Point(250, 125);
+            oyunAdiTB.Name = "oyunAdiTB";
+            oyunAdiTB.Size = new Size(160, 27);
+            oyunAdiTB.TabIndex = 2;
             // 
             // label2
             // 
@@ -78,14 +79,15 @@ namespace XteamVeriTabani
             label2.TabIndex = 3;
             label2.Text = "Oyun İsmi";
             // 
-            // comboBox1
+            // kategoriComboBox
             // 
-            comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(460, 125);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(151, 28);
-            comboBox1.TabIndex = 4;
+            kategoriComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
+            kategoriComboBox.FormattingEnabled = true;
+            kategoriComboBox.Location = new Point(460, 125);
+            kategoriComboBox.Name = "kategoriComboBox";
+            kategoriComboBox.Size = new Size(151, 28);
+            kategoriComboBox.TabIndex = 4;
+            kategoriComboBox.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
             // label3
             // 
@@ -96,14 +98,15 @@ namespace XteamVeriTabani
             label3.TabIndex = 5;
             label3.Text = "Kategoriler";
             // 
-            // button1
+            // oyunuAraButton
             // 
-            button1.Location = new Point(658, 125);
-            button1.Name = "button1";
-            button1.Size = new Size(153, 29);
-            button1.TabIndex = 6;
-            button1.Text = "Oyunu Ara";
-            button1.UseVisualStyleBackColor = true;
+            oyunuAraButton.Location = new Point(658, 125);
+            oyunuAraButton.Name = "oyunuAraButton";
+            oyunuAraButton.Size = new Size(153, 29);
+            oyunuAraButton.TabIndex = 6;
+            oyunuAraButton.Text = "Oyunu Ara";
+            oyunuAraButton.UseVisualStyleBackColor = true;
+            oyunuAraButton.Click += OyunuAraButton_Click;
             // 
             // label4
             // 
@@ -125,29 +128,19 @@ namespace XteamVeriTabani
             oyunuGorButton.UseVisualStyleBackColor = true;
             oyunuGorButton.Click += oyunuGorButton_Click;
             // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 16F);
-            label5.Location = new Point(1030, 28);
-            label5.Name = "label5";
-            label5.Size = new Size(99, 37);
-            label5.TabIndex = 9;
-            label5.Text = "Bakiye:";
-            // 
             // bakiyeLabel
             // 
             bakiyeLabel.AutoSize = true;
             bakiyeLabel.Font = new Font("Segoe UI", 16F);
-            bakiyeLabel.Location = new Point(1133, 28);
+            bakiyeLabel.Location = new Point(969, 28);
             bakiyeLabel.Name = "bakiyeLabel";
-            bakiyeLabel.Size = new Size(74, 37);
+            bakiyeLabel.Size = new Size(163, 37);
             bakiyeLabel.TabIndex = 10;
-            bakiyeLabel.Text = "12TL";
+            bakiyeLabel.Text = "Bakiye: 12TL";
             // 
             // sepetButton
             // 
-            sepetButton.Location = new Point(899, 28);
+            sepetButton.Location = new Point(838, 28);
             sepetButton.Name = "sepetButton";
             sepetButton.Size = new Size(125, 41);
             sepetButton.TabIndex = 11;
@@ -155,21 +148,31 @@ namespace XteamVeriTabani
             sepetButton.UseVisualStyleBackColor = true;
             sepetButton.Click += sepetButton_Click;
             // 
+            // bakiyeEkleButton
+            // 
+            bakiyeEkleButton.Location = new Point(969, 68);
+            bakiyeEkleButton.Name = "bakiyeEkleButton";
+            bakiyeEkleButton.Size = new Size(94, 32);
+            bakiyeEkleButton.TabIndex = 12;
+            bakiyeEkleButton.Text = "+200 TL";
+            bakiyeEkleButton.UseVisualStyleBackColor = true;
+            bakiyeEkleButton.Click += bakiyeEkleButton_Click;
+            // 
             // MagazaMenuForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1219, 796);
+            Controls.Add(bakiyeEkleButton);
             Controls.Add(sepetButton);
             Controls.Add(bakiyeLabel);
-            Controls.Add(label5);
             Controls.Add(oyunuGorButton);
             Controls.Add(label4);
-            Controls.Add(button1);
+            Controls.Add(oyunuAraButton);
             Controls.Add(label3);
-            Controls.Add(comboBox1);
+            Controls.Add(kategoriComboBox);
             Controls.Add(label2);
-            Controls.Add(textBox1);
+            Controls.Add(oyunAdiTB);
             Controls.Add(oyunlarListBox);
             Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.Fixed3D;
@@ -188,15 +191,15 @@ namespace XteamVeriTabani
 
         private Label label1;
         private ListBox oyunlarListBox;
-        private TextBox textBox1;
+        private TextBox oyunAdiTB;
         private Label label2;
-        private ComboBox comboBox1;
+        private ComboBox kategoriComboBox;
         private Label label3;
-        private Button button1;
+        private Button oyunuAraButton;
         private Label label4;
         private Button oyunuGorButton;
-        private Label label5;
         private Label bakiyeLabel;
         private Button sepetButton;
+        private Button bakiyeEkleButton;
     }
 }

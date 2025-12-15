@@ -30,11 +30,6 @@
         {
             oyunuGorButton = new Button();
             label4 = new Label();
-            oyunuAraButton = new Button();
-            label3 = new Label();
-            kategoriComboBox = new ComboBox();
-            label2 = new Label();
-            oyunAdiTextBox = new TextBox();
             oyunlarListBox = new ListBox();
             label1 = new Label();
             oyunDuzenleButton = new Button();
@@ -49,7 +44,7 @@
             oyunuGorButton.TabIndex = 17;
             oyunuGorButton.Text = "Oyunu Gör";
             oyunuGorButton.UseVisualStyleBackColor = true;
-            oyunuGorButton.Click += this.oyunuGorButton_Click;
+            oyunuGorButton.Click += oyunuGorButton_Click;
             // 
             // label4
             // 
@@ -60,49 +55,6 @@
             label4.Size = new Size(155, 41);
             label4.TabIndex = 16;
             label4.Text = "Oyunlarım";
-            // 
-            // oyunuAraButton
-            // 
-            oyunuAraButton.Location = new Point(756, 96);
-            oyunuAraButton.Name = "oyunuAraButton";
-            oyunuAraButton.Size = new Size(153, 29);
-            oyunuAraButton.TabIndex = 15;
-            oyunuAraButton.Text = "Oyunu Ara";
-            oyunuAraButton.UseVisualStyleBackColor = true;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new Point(558, 73);
-            label3.Name = "label3";
-            label3.Size = new Size(83, 20);
-            label3.TabIndex = 14;
-            label3.Text = "Kategoriler";
-            // 
-            // kategoriComboBox
-            // 
-            kategoriComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
-            kategoriComboBox.FormattingEnabled = true;
-            kategoriComboBox.Location = new Point(558, 96);
-            kategoriComboBox.Name = "kategoriComboBox";
-            kategoriComboBox.Size = new Size(151, 28);
-            kategoriComboBox.TabIndex = 13;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(348, 73);
-            label2.Name = "label2";
-            label2.Size = new Size(74, 20);
-            label2.TabIndex = 12;
-            label2.Text = "Oyun İsmi";
-            // 
-            // oyunAdiTextBox
-            // 
-            oyunAdiTextBox.Location = new Point(348, 96);
-            oyunAdiTextBox.Name = "oyunAdiTextBox";
-            oyunAdiTextBox.Size = new Size(160, 27);
-            oyunAdiTextBox.TabIndex = 11;
             // 
             // oyunlarListBox
             // 
@@ -124,23 +76,23 @@
             // 
             // oyunDuzenleButton
             // 
-            oyunDuzenleButton.Enabled = false;
             oyunDuzenleButton.Location = new Point(856, 732);
             oyunDuzenleButton.Name = "oyunDuzenleButton";
             oyunDuzenleButton.Size = new Size(147, 29);
             oyunDuzenleButton.TabIndex = 18;
             oyunDuzenleButton.Text = "Oyunu Düzenle";
             oyunDuzenleButton.UseVisualStyleBackColor = true;
+            oyunDuzenleButton.Click += oyunDuzenleButton_Click;
             // 
             // oyunEkleButton
             // 
-            oyunEkleButton.Enabled = false;
             oyunEkleButton.Location = new Point(703, 732);
             oyunEkleButton.Name = "oyunEkleButton";
             oyunEkleButton.Size = new Size(147, 29);
             oyunEkleButton.TabIndex = 19;
             oyunEkleButton.Text = "Oyun Ekle";
             oyunEkleButton.UseVisualStyleBackColor = true;
+            oyunEkleButton.Click += oyunEkleButton_Click;
             // 
             // KutuphaneMenuForm
             // 
@@ -151,11 +103,6 @@
             Controls.Add(oyunDuzenleButton);
             Controls.Add(oyunuGorButton);
             Controls.Add(label4);
-            Controls.Add(oyunuAraButton);
-            Controls.Add(label3);
-            Controls.Add(kategoriComboBox);
-            Controls.Add(label2);
-            Controls.Add(oyunAdiTextBox);
             Controls.Add(oyunlarListBox);
             Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.Fixed3D;
@@ -163,6 +110,7 @@
             Name = "KutuphaneMenuForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "KutuphaneMenuForm";
+            Load += KutuphaneMenuForm_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -171,11 +119,6 @@
 
         private Button oyunuGorButton;
         private Label label4;
-        private Button oyunuAraButton;
-        private Label label3;
-        private ComboBox kategoriComboBox;
-        private Label label2;
-        private TextBox oyunAdiTextBox;
         private ListBox oyunlarListBox;
         private Label label1;
         private Button oyunDuzenleButton;

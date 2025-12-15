@@ -37,10 +37,10 @@
             gelistiriciLabel = new Label();
             label1 = new Label();
             groupBox1 = new GroupBox();
+            dilDataGridView = new DataGridView();
             label7 = new Label();
             kategoriListBox = new ListBox();
             label5 = new Label();
-            dilListBox = new ListBox();
             yuklemeBoyutuLabel = new Label();
             label6 = new Label();
             indirilmeSayisiLabel = new Label();
@@ -51,6 +51,7 @@
             kampanyaLabel = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dilDataGridView).BeginInit();
             SuspendLayout();
             // 
             // oyunBaslikLabel
@@ -84,7 +85,7 @@
             // 
             oyunFiyatLabel.AutoSize = true;
             oyunFiyatLabel.Font = new Font("Segoe UI", 20F);
-            oyunFiyatLabel.Location = new Point(64, 483);
+            oyunFiyatLabel.Location = new Point(64, 493);
             oyunFiyatLabel.Name = "oyunFiyatLabel";
             oyunFiyatLabel.Size = new Size(99, 46);
             oyunFiyatLabel.TabIndex = 4;
@@ -93,12 +94,13 @@
             // sepeteEkleButton
             // 
             sepeteEkleButton.Font = new Font("Segoe UI", 12F);
-            sepeteEkleButton.Location = new Point(169, 483);
+            sepeteEkleButton.Location = new Point(64, 542);
             sepeteEkleButton.Name = "sepeteEkleButton";
             sepeteEkleButton.Size = new Size(234, 46);
             sepeteEkleButton.TabIndex = 5;
             sepeteEkleButton.Text = "Sepete Ekle";
             sepeteEkleButton.UseVisualStyleBackColor = true;
+            sepeteEkleButton.Click += sepeteEkleButton_Click;
             // 
             // gelistiriciLabel
             // 
@@ -123,10 +125,10 @@
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(dilDataGridView);
             groupBox1.Controls.Add(label7);
             groupBox1.Controls.Add(kategoriListBox);
             groupBox1.Controls.Add(label5);
-            groupBox1.Controls.Add(dilListBox);
             groupBox1.Controls.Add(yuklemeBoyutuLabel);
             groupBox1.Controls.Add(label6);
             groupBox1.Controls.Add(indirilmeSayisiLabel);
@@ -142,6 +144,20 @@
             groupBox1.Size = new Size(556, 634);
             groupBox1.TabIndex = 8;
             groupBox1.TabStop = false;
+            // 
+            // dilDataGridView
+            // 
+            dilDataGridView.AllowUserToAddRows = false;
+            dilDataGridView.AllowUserToDeleteRows = false;
+            dilDataGridView.AllowUserToOrderColumns = true;
+            dilDataGridView.AllowUserToResizeColumns = false;
+            dilDataGridView.AllowUserToResizeRows = false;
+            dilDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dilDataGridView.Location = new Point(26, 389);
+            dilDataGridView.Name = "dilDataGridView";
+            dilDataGridView.RowHeadersWidth = 51;
+            dilDataGridView.Size = new Size(372, 101);
+            dilDataGridView.TabIndex = 25;
             // 
             // label7
             // 
@@ -170,14 +186,6 @@
             label5.Size = new Size(173, 28);
             label5.TabIndex = 22;
             label5.Text = "Desteklenen Diller:";
-            // 
-            // dilListBox
-            // 
-            dilListBox.FormattingEnabled = true;
-            dilListBox.Location = new Point(28, 386);
-            dilListBox.Name = "dilListBox";
-            dilListBox.Size = new Size(235, 104);
-            dilListBox.TabIndex = 21;
             // 
             // yuklemeBoyutuLabel
             // 
@@ -257,7 +265,7 @@
             kampanyaLabel.AutoSize = true;
             kampanyaLabel.BackColor = Color.Transparent;
             kampanyaLabel.Font = new Font("Segoe UI", 15F);
-            kampanyaLabel.Location = new Point(78, 420);
+            kampanyaLabel.Location = new Point(77, 418);
             kampanyaLabel.Name = "kampanyaLabel";
             kampanyaLabel.Size = new Size(163, 35);
             kampanyaLabel.TabIndex = 9;
@@ -280,9 +288,11 @@
             Name = "MagazaOyunForm";
             StartPosition = FormStartPosition.CenterParent;
             Text = "OyunForm";
+            Load += MagazaOyunForm_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dilDataGridView).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -308,6 +318,6 @@
         private Label label5;
         private Label label7;
         private ListBox kategoriListBox;
-        private ListBox dilListBox;
+        private DataGridView dilDataGridView;
     }
 }

@@ -29,14 +29,11 @@
         private void InitializeComponent()
         {
             label1 = new Label();
-            dataGridView1 = new DataGridView();
-            button1 = new Button();
-            button2 = new Button();
-            label2 = new Label();
+            siparisiTamamlaBtn = new Button();
+            sepettenSilBtn = new Button();
             toplamTurarLabel = new Label();
-            label3 = new Label();
             bakiyeLabel = new Label();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            sepetListBox = new ListBox();
             SuspendLayout();
             // 
             // label1
@@ -49,94 +46,73 @@
             label1.TabIndex = 1;
             label1.Text = "Sepetteki Oyunlar";
             // 
-            // dataGridView1
+            // siparisiTamamlaBtn
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(56, 138);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(780, 351);
-            dataGridView1.TabIndex = 2;
+            siparisiTamamlaBtn.Font = new Font("Segoe UI", 11F);
+            siparisiTamamlaBtn.Location = new Point(56, 495);
+            siparisiTamamlaBtn.Name = "siparisiTamamlaBtn";
+            siparisiTamamlaBtn.Size = new Size(169, 45);
+            siparisiTamamlaBtn.TabIndex = 3;
+            siparisiTamamlaBtn.Text = "Siparişi Tamamla";
+            siparisiTamamlaBtn.UseVisualStyleBackColor = true;
+            siparisiTamamlaBtn.Click += siparisiTamamlaBtn_Click;
             // 
-            // button1
+            // sepettenSilBtn
             // 
-            button1.Font = new Font("Segoe UI", 11F);
-            button1.Location = new Point(56, 495);
-            button1.Name = "button1";
-            button1.Size = new Size(169, 45);
-            button1.TabIndex = 3;
-            button1.Text = "Siparişi Tamamla";
-            button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            button2.Font = new Font("Segoe UI", 11F);
-            button2.Location = new Point(231, 495);
-            button2.Name = "button2";
-            button2.Size = new Size(100, 45);
-            button2.TabIndex = 4;
-            button2.Text = "Sil";
-            button2.UseVisualStyleBackColor = true;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 15F);
-            label2.Location = new Point(598, 497);
-            label2.Name = "label2";
-            label2.Size = new Size(166, 35);
-            label2.TabIndex = 5;
-            label2.Text = "Toplam Tutar:";
+            sepettenSilBtn.Font = new Font("Segoe UI", 11F);
+            sepettenSilBtn.Location = new Point(231, 495);
+            sepettenSilBtn.Name = "sepettenSilBtn";
+            sepettenSilBtn.Size = new Size(100, 45);
+            sepettenSilBtn.TabIndex = 4;
+            sepettenSilBtn.Text = "Sil";
+            sepettenSilBtn.UseVisualStyleBackColor = true;
+            sepettenSilBtn.Click += sepettenSilBtn_Click;
             // 
             // toplamTurarLabel
             // 
             toplamTurarLabel.AutoSize = true;
             toplamTurarLabel.Font = new Font("Segoe UI", 15F);
-            toplamTurarLabel.Location = new Point(770, 497);
+            toplamTurarLabel.Location = new Point(585, 505);
             toplamTurarLabel.Name = "toplamTurarLabel";
-            toplamTurarLabel.Size = new Size(66, 35);
+            toplamTurarLabel.Size = new Size(224, 35);
             toplamTurarLabel.TabIndex = 6;
-            toplamTurarLabel.Text = "20TL";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 15F);
-            label3.Location = new Point(661, 58);
-            label3.Name = "label3";
-            label3.Size = new Size(90, 35);
-            label3.TabIndex = 7;
-            label3.Text = "Bakiye:";
+            toplamTurarLabel.Text = "Toplam Tutar: 20TL";
             // 
             // bakiyeLabel
             // 
             bakiyeLabel.AutoSize = true;
             bakiyeLabel.Font = new Font("Segoe UI", 15F);
-            bakiyeLabel.Location = new Point(757, 58);
+            bakiyeLabel.Location = new Point(686, 55);
             bakiyeLabel.Name = "bakiyeLabel";
-            bakiyeLabel.Size = new Size(79, 35);
+            bakiyeLabel.Size = new Size(148, 35);
             bakiyeLabel.TabIndex = 8;
-            bakiyeLabel.Text = "220TL";
+            bakiyeLabel.Text = "Bakiye: 50TL";
+            // 
+            // sepetListBox
+            // 
+            sepetListBox.FormattingEnabled = true;
+            sepetListBox.Location = new Point(56, 106);
+            sepetListBox.Name = "sepetListBox";
+            sepetListBox.Size = new Size(795, 384);
+            sepetListBox.TabIndex = 9;
             // 
             // SepetForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(911, 596);
+            ClientSize = new Size(915, 597);
+            Controls.Add(sepetListBox);
             Controls.Add(bakiyeLabel);
-            Controls.Add(label3);
             Controls.Add(toplamTurarLabel);
-            Controls.Add(label2);
-            Controls.Add(button2);
-            Controls.Add(button1);
-            Controls.Add(dataGridView1);
+            Controls.Add(sepettenSilBtn);
+            Controls.Add(siparisiTamamlaBtn);
             Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.Fixed3D;
             MaximizeBox = false;
             Name = "SepetForm";
             StartPosition = FormStartPosition.CenterParent;
             Text = "SepetForm";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            Load += SepetForm_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -144,12 +120,10 @@
         #endregion
 
         private Label label1;
-        private DataGridView dataGridView1;
-        private Button button1;
-        private Button button2;
-        private Label label2;
+        private Button siparisiTamamlaBtn;
+        private Button sepettenSilBtn;
         private Label toplamTurarLabel;
-        private Label label3;
         private Label bakiyeLabel;
+        private ListBox sepetListBox;
     }
 }

@@ -34,10 +34,11 @@
             arkadasButton = new Button();
             label1 = new Label();
             kutuphaneButton = new Button();
-            button1 = new Button();
+            hesapCikisButton = new Button();
             hesapAdiLabel = new Label();
             uygulamadanCikisBtn = new Button();
             satinAlimlarButton = new Button();
+            gelistiriciPanelLabel = new Label();
             SuspendLayout();
             // 
             // magazaButton
@@ -71,7 +72,7 @@
             hesapButton.BackColor = Color.Azure;
             hesapButton.Font = new Font("Yu Gothic UI", 12F, FontStyle.Bold);
             hesapButton.ForeColor = Color.MidnightBlue;
-            hesapButton.Location = new Point(445, 426);
+            hesapButton.Location = new Point(708, 283);
             hesapButton.Name = "hesapButton";
             hesapButton.Size = new Size(252, 120);
             hesapButton.TabIndex = 3;
@@ -84,7 +85,7 @@
             arkadasButton.BackColor = Color.Azure;
             arkadasButton.Font = new Font("Yu Gothic UI", 12F, FontStyle.Bold);
             arkadasButton.ForeColor = Color.MidnightBlue;
-            arkadasButton.Location = new Point(730, 283);
+            arkadasButton.Location = new Point(432, 426);
             arkadasButton.Name = "arkadasButton";
             arkadasButton.Size = new Size(252, 120);
             arkadasButton.TabIndex = 4;
@@ -108,7 +109,7 @@
             kutuphaneButton.BackColor = Color.Azure;
             kutuphaneButton.Font = new Font("Yu Gothic UI", 12F, FontStyle.Bold);
             kutuphaneButton.ForeColor = Color.MidnightBlue;
-            kutuphaneButton.Location = new Point(445, 283);
+            kutuphaneButton.Location = new Point(432, 283);
             kutuphaneButton.Name = "kutuphaneButton";
             kutuphaneButton.Size = new Size(252, 120);
             kutuphaneButton.TabIndex = 7;
@@ -116,18 +117,18 @@
             kutuphaneButton.UseVisualStyleBackColor = false;
             kutuphaneButton.Click += kutuphaneButton_Click;
             // 
-            // button1
+            // hesapCikisButton
             // 
-            button1.BackColor = SystemColors.ControlLightLight;
-            button1.Font = new Font("Yu Gothic UI", 11F, FontStyle.Bold);
-            button1.ForeColor = SystemColors.ActiveCaptionText;
-            button1.Location = new Point(161, 587);
-            button1.Name = "button1";
-            button1.Size = new Size(168, 55);
-            button1.TabIndex = 9;
-            button1.Text = "Hesaptan Çık";
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
+            hesapCikisButton.BackColor = SystemColors.ControlLightLight;
+            hesapCikisButton.Font = new Font("Yu Gothic UI", 11F, FontStyle.Bold);
+            hesapCikisButton.ForeColor = SystemColors.ActiveCaptionText;
+            hesapCikisButton.Location = new Point(161, 587);
+            hesapCikisButton.Name = "hesapCikisButton";
+            hesapCikisButton.Size = new Size(168, 55);
+            hesapCikisButton.TabIndex = 9;
+            hesapCikisButton.Text = "Hesaptan Çık";
+            hesapCikisButton.UseVisualStyleBackColor = false;
+            hesapCikisButton.Click += hesapCikisButton_Click;
             // 
             // hesapAdiLabel
             // 
@@ -157,7 +158,7 @@
             satinAlimlarButton.BackColor = Color.Azure;
             satinAlimlarButton.Font = new Font("Yu Gothic UI", 12F, FontStyle.Bold);
             satinAlimlarButton.ForeColor = Color.MidnightBlue;
-            satinAlimlarButton.Location = new Point(730, 426);
+            satinAlimlarButton.Location = new Point(708, 426);
             satinAlimlarButton.Name = "satinAlimlarButton";
             satinAlimlarButton.Size = new Size(252, 120);
             satinAlimlarButton.TabIndex = 13;
@@ -165,16 +166,27 @@
             satinAlimlarButton.UseVisualStyleBackColor = false;
             satinAlimlarButton.Click += satinAlimlarButton_Click;
             // 
+            // gelistiriciPanelLabel
+            // 
+            gelistiriciPanelLabel.AutoSize = true;
+            gelistiriciPanelLabel.Location = new Point(1077, 9);
+            gelistiriciPanelLabel.Name = "gelistiriciPanelLabel";
+            gelistiriciPanelLabel.Size = new Size(113, 20);
+            gelistiriciPanelLabel.TabIndex = 14;
+            gelistiriciPanelLabel.Text = "Geliştirici Paneli";
+            gelistiriciPanelLabel.Visible = false;
+            // 
             // AnaMenuForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1202, 744);
+            Controls.Add(gelistiriciPanelLabel);
             Controls.Add(satinAlimlarButton);
             Controls.Add(uygulamadanCikisBtn);
             Controls.Add(hesapAdiLabel);
-            Controls.Add(button1);
+            Controls.Add(hesapCikisButton);
             Controls.Add(kutuphaneButton);
             Controls.Add(label1);
             Controls.Add(arkadasButton);
@@ -185,6 +197,7 @@
             Name = "AnaMenuForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "AnaMenu";
+            Load += AnaMenuForm_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -197,9 +210,10 @@
         private Button arkadasButton;
         private Label label1;
         private Button kutuphaneButton;
-        private Button button1;
+        private Button hesapCikisButton;
         private Label hesapAdiLabel;
         private Button uygulamadanCikisBtn;
         private Button satinAlimlarButton;
+        private Label gelistiriciPanelLabel;
     }
 }

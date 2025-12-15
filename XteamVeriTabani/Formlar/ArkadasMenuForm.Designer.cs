@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            hesapAdiTB = new TextBox();
+            kAdiTB = new TextBox();
             label1 = new Label();
             label2 = new Label();
             arkadasEkleButton = new Button();
@@ -36,17 +36,17 @@
             hesabiGorButton = new Button();
             silButton = new Button();
             arkadasListBox = new ListBox();
-            listBox1 = new ListBox();
+            gelenIstekListBox = new ListBox();
             kabuletBtn = new Button();
             reddetBtn = new Button();
             SuspendLayout();
             // 
-            // hesapAdiTB
+            // kAdiTB
             // 
-            hesapAdiTB.Location = new Point(829, 131);
-            hesapAdiTB.Name = "hesapAdiTB";
-            hesapAdiTB.Size = new Size(206, 27);
-            hesapAdiTB.TabIndex = 0;
+            kAdiTB.Location = new Point(829, 131);
+            kAdiTB.Name = "kAdiTB";
+            kAdiTB.Size = new Size(206, 27);
+            kAdiTB.TabIndex = 0;
             // 
             // label1
             // 
@@ -54,9 +54,9 @@
             label1.Font = new Font("Segoe UI", 12F);
             label1.Location = new Point(829, 93);
             label1.Name = "label1";
-            label1.Size = new Size(101, 28);
+            label1.Size = new Size(123, 28);
             label1.TabIndex = 1;
-            label1.Text = "Hesap Adı";
+            label1.Text = "Oyuncu Nick";
             // 
             // label2
             // 
@@ -76,6 +76,7 @@
             arkadasEkleButton.TabIndex = 4;
             arkadasEkleButton.Text = "Arkadaş Ekle";
             arkadasEkleButton.UseVisualStyleBackColor = true;
+            arkadasEkleButton.Click += arkadasEkleButton_Click;
             // 
             // label3
             // 
@@ -89,21 +90,25 @@
             // 
             // hesabiGorButton
             // 
+            hesabiGorButton.Enabled = false;
             hesabiGorButton.Location = new Point(554, 361);
             hesabiGorButton.Name = "hesabiGorButton";
             hesabiGorButton.Size = new Size(94, 29);
             hesabiGorButton.TabIndex = 7;
             hesabiGorButton.Text = "Hesabı Gör";
             hesabiGorButton.UseVisualStyleBackColor = true;
+            hesabiGorButton.Click += hesabiGorButton_Click;
             // 
             // silButton
             // 
+            silButton.Enabled = false;
             silButton.Location = new Point(454, 361);
             silButton.Name = "silButton";
             silButton.Size = new Size(94, 29);
             silButton.TabIndex = 8;
             silButton.Text = "Sil";
             silButton.UseVisualStyleBackColor = true;
+            silButton.Click += silButton_Click;
             // 
             // arkadasListBox
             // 
@@ -112,32 +117,38 @@
             arkadasListBox.Name = "arkadasListBox";
             arkadasListBox.Size = new Size(606, 264);
             arkadasListBox.TabIndex = 9;
+            arkadasListBox.SelectedIndexChanged += arkadasListBox_SelectedIndexChanged;
             // 
-            // listBox1
+            // gelenIstekListBox
             // 
-            listBox1.FormattingEnabled = true;
-            listBox1.Location = new Point(53, 470);
-            listBox1.Name = "listBox1";
-            listBox1.Size = new Size(606, 224);
-            listBox1.TabIndex = 10;
+            gelenIstekListBox.FormattingEnabled = true;
+            gelenIstekListBox.Location = new Point(53, 470);
+            gelenIstekListBox.Name = "gelenIstekListBox";
+            gelenIstekListBox.Size = new Size(606, 224);
+            gelenIstekListBox.TabIndex = 10;
+            gelenIstekListBox.SelectedIndexChanged += gelenIstekListBox_SelectedIndexChanged;
             // 
             // kabuletBtn
             // 
+            kabuletBtn.Enabled = false;
             kabuletBtn.Location = new Point(464, 700);
             kabuletBtn.Name = "kabuletBtn";
             kabuletBtn.Size = new Size(94, 29);
             kabuletBtn.TabIndex = 12;
             kabuletBtn.Text = "Kabul Et";
             kabuletBtn.UseVisualStyleBackColor = true;
+            kabuletBtn.Click += kabuletBtn_Click;
             // 
             // reddetBtn
             // 
+            reddetBtn.Enabled = false;
             reddetBtn.Location = new Point(564, 700);
             reddetBtn.Name = "reddetBtn";
             reddetBtn.Size = new Size(94, 29);
             reddetBtn.TabIndex = 11;
             reddetBtn.Text = "Reddet";
             reddetBtn.UseVisualStyleBackColor = true;
+            reddetBtn.Click += reddetBtn_Click;
             // 
             // ArkadasMenuForm
             // 
@@ -146,7 +157,7 @@
             ClientSize = new Size(1223, 782);
             Controls.Add(kabuletBtn);
             Controls.Add(reddetBtn);
-            Controls.Add(listBox1);
+            Controls.Add(gelenIstekListBox);
             Controls.Add(arkadasListBox);
             Controls.Add(silButton);
             Controls.Add(hesabiGorButton);
@@ -154,19 +165,20 @@
             Controls.Add(arkadasEkleButton);
             Controls.Add(label2);
             Controls.Add(label1);
-            Controls.Add(hesapAdiTB);
+            Controls.Add(kAdiTB);
             FormBorderStyle = FormBorderStyle.Fixed3D;
             MinimizeBox = false;
             Name = "ArkadasMenuForm";
             StartPosition = FormStartPosition.CenterParent;
             Text = "ArkadasMenuFormcs";
+            Load += ArkadasMenuForm_Load;
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private TextBox hesapAdiTB;
+        private TextBox kAdiTB;
         private Label label1;
         private Label label2;
         private Button arkadasEkleButton;
@@ -174,7 +186,7 @@
         private Button hesabiGorButton;
         private Button silButton;
         private ListBox arkadasListBox;
-        private ListBox listBox1;
+        private ListBox gelenIstekListBox;
         private Button kabuletBtn;
         private Button reddetBtn;
     }

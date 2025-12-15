@@ -28,33 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label4 = new Label();
+            wblabel = new Label();
             label2 = new Label();
             label5 = new Label();
             label3 = new Label();
             hesapAdiLabel = new Label();
             kullaniciAdiTB = new TextBox();
             sifreTB = new TextBox();
-            label1 = new Label();
-            label6 = new Label();
+            vnlabel = new Label();
             hesapAdiTB = new TextBox();
-            button1 = new Button();
-            textBox2 = new TextBox();
-            button2 = new Button();
+            duzenleButton = new Button();
+            webSitesiTB = new TextBox();
+            kaydetButton = new Button();
             epostaTB = new TextBox();
             label7 = new Label();
+            vergiNoTB = new TextBox();
             SuspendLayout();
             // 
-            // label4
+            // wblabel
             // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Calibri", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label4.Location = new Point(612, 286);
-            label4.Name = "label4";
-            label4.Size = new Size(172, 41);
-            label4.TabIndex = 22;
-            label4.Text = "Web Sitesi:";
-            label4.Visible = false;
+            wblabel.AutoSize = true;
+            wblabel.Font = new Font("Calibri", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            wblabel.Location = new Point(612, 286);
+            wblabel.Name = "wblabel";
+            wblabel.Size = new Size(172, 41);
+            wblabel.TabIndex = 22;
+            wblabel.Text = "Web Sitesi:";
+            wblabel.Visible = false;
             // 
             // label2
             // 
@@ -112,29 +112,16 @@
             sifreTB.Size = new Size(200, 27);
             sifreTB.TabIndex = 25;
             // 
-            // label1
+            // vnlabel
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 15F, FontStyle.Bold);
-            label1.ForeColor = Color.FromArgb(64, 64, 64);
-            label1.Location = new Point(795, 343);
-            label1.Name = "label1";
-            label1.RightToLeft = RightToLeft.Yes;
-            label1.Size = new Size(141, 35);
-            label1.TabIndex = 27;
-            label1.Text = "21.11.2015";
-            label1.Visible = false;
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Calibri", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label6.Location = new Point(612, 340);
-            label6.Name = "label6";
-            label6.Size = new Size(145, 41);
-            label6.TabIndex = 26;
-            label6.Text = "Vergi No:";
-            label6.Visible = false;
+            vnlabel.AutoSize = true;
+            vnlabel.Font = new Font("Calibri", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            vnlabel.Location = new Point(612, 340);
+            vnlabel.Name = "vnlabel";
+            vnlabel.Size = new Size(145, 41);
+            vnlabel.TabIndex = 26;
+            vnlabel.Text = "Vergi No:";
+            vnlabel.Visible = false;
             // 
             // hesapAdiTB
             // 
@@ -144,32 +131,34 @@
             hesapAdiTB.Size = new Size(200, 27);
             hesapAdiTB.TabIndex = 28;
             // 
-            // button1
+            // duzenleButton
             // 
-            button1.Location = new Point(353, 479);
-            button1.Name = "button1";
-            button1.Size = new Size(94, 29);
-            button1.TabIndex = 29;
-            button1.Text = "Düzenle";
-            button1.UseVisualStyleBackColor = true;
+            duzenleButton.Location = new Point(353, 479);
+            duzenleButton.Name = "duzenleButton";
+            duzenleButton.Size = new Size(94, 29);
+            duzenleButton.TabIndex = 29;
+            duzenleButton.Text = "Düzenle";
+            duzenleButton.UseVisualStyleBackColor = true;
+            duzenleButton.Click += duzenleButton_Click;
             // 
-            // textBox2
+            // webSitesiTB
             // 
-            textBox2.Location = new Point(795, 298);
-            textBox2.Name = "textBox2";
-            textBox2.ReadOnly = true;
-            textBox2.Size = new Size(200, 27);
-            textBox2.TabIndex = 30;
-            textBox2.Visible = false;
+            webSitesiTB.Location = new Point(795, 298);
+            webSitesiTB.Name = "webSitesiTB";
+            webSitesiTB.ReadOnly = true;
+            webSitesiTB.Size = new Size(200, 27);
+            webSitesiTB.TabIndex = 30;
+            webSitesiTB.Visible = false;
             // 
-            // button2
+            // kaydetButton
             // 
-            button2.Location = new Point(459, 479);
-            button2.Name = "button2";
-            button2.Size = new Size(94, 29);
-            button2.TabIndex = 31;
-            button2.Text = "Kaydet";
-            button2.UseVisualStyleBackColor = true;
+            kaydetButton.Location = new Point(459, 479);
+            kaydetButton.Name = "kaydetButton";
+            kaydetButton.Size = new Size(94, 29);
+            kaydetButton.TabIndex = 31;
+            kaydetButton.Text = "Kaydet";
+            kaydetButton.UseVisualStyleBackColor = true;
+            kaydetButton.Click += kaydetButton_Click;
             // 
             // epostaTB
             // 
@@ -189,22 +178,31 @@
             label7.TabIndex = 32;
             label7.Text = "E-Posta:";
             // 
+            // vergiNoTB
+            // 
+            vergiNoTB.Location = new Point(795, 352);
+            vergiNoTB.Name = "vergiNoTB";
+            vergiNoTB.ReadOnly = true;
+            vergiNoTB.Size = new Size(200, 27);
+            vergiNoTB.TabIndex = 34;
+            vergiNoTB.Visible = false;
+            // 
             // HesapForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1223, 782);
+            Controls.Add(vergiNoTB);
             Controls.Add(epostaTB);
             Controls.Add(label7);
-            Controls.Add(button2);
-            Controls.Add(textBox2);
-            Controls.Add(button1);
+            Controls.Add(kaydetButton);
+            Controls.Add(webSitesiTB);
+            Controls.Add(duzenleButton);
             Controls.Add(hesapAdiTB);
-            Controls.Add(label1);
-            Controls.Add(label6);
+            Controls.Add(vnlabel);
             Controls.Add(sifreTB);
             Controls.Add(kullaniciAdiTB);
-            Controls.Add(label4);
+            Controls.Add(wblabel);
             Controls.Add(label2);
             Controls.Add(label5);
             Controls.Add(label3);
@@ -214,25 +212,26 @@
             Name = "HesapForm";
             StartPosition = FormStartPosition.CenterParent;
             Text = "HesapForm";
+            Load += HesapForm_Load;
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-        private Label label4;
+        private Label wblabel;
         private Label label2;
         private Label label5;
         private Label label3;
         private Label hesapAdiLabel;
         private TextBox kullaniciAdiTB;
         private TextBox sifreTB;
-        private Label label1;
-        private Label label6;
+        private Label vnlabel;
         private TextBox hesapAdiTB;
-        private Button button1;
-        private TextBox textBox2;
-        private Button button2;
+        private Button duzenleButton;
+        private TextBox webSitesiTB;
+        private Button kaydetButton;
         private TextBox epostaTB;
         private Label label7;
+        private TextBox vergiNoTB;
     }
 }

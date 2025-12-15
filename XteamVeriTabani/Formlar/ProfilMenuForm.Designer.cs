@@ -35,15 +35,13 @@
             label5 = new Label();
             sonGirisLabel = new Label();
             label2 = new Label();
-            webSitesiLabel = new Label();
-            label4 = new Label();
             SuspendLayout();
             // 
             // hesapAdiLabel
             // 
             hesapAdiLabel.AutoSize = true;
             hesapAdiLabel.Font = new Font("Segoe UI Variable Display Semib", 25F);
-            hesapAdiLabel.Location = new Point(64, 65);
+            hesapAdiLabel.Location = new Point(68, 87);
             hesapAdiLabel.Name = "hesapAdiLabel";
             hesapAdiLabel.Size = new Size(158, 56);
             hesapAdiLabel.TabIndex = 1;
@@ -53,7 +51,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Calibri", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.Location = new Point(64, 175);
+            label3.Location = new Point(77, 204);
             label3.Name = "label3";
             label3.Size = new Size(136, 41);
             label3.TabIndex = 3;
@@ -64,7 +62,7 @@
             seviyeLabel.AutoSize = true;
             seviyeLabel.Font = new Font("Segoe UI", 15F, FontStyle.Bold);
             seviyeLabel.ForeColor = Color.FromArgb(64, 64, 64);
-            seviyeLabel.Location = new Point(247, 181);
+            seviyeLabel.Location = new Point(260, 210);
             seviyeLabel.Name = "seviyeLabel";
             seviyeLabel.Size = new Size(29, 35);
             seviyeLabel.TabIndex = 8;
@@ -75,7 +73,7 @@
             kayitTarihiLabel.AutoSize = true;
             kayitTarihiLabel.Font = new Font("Segoe UI", 15F, FontStyle.Bold);
             kayitTarihiLabel.ForeColor = Color.FromArgb(64, 64, 64);
-            kayitTarihiLabel.Location = new Point(247, 219);
+            kayitTarihiLabel.Location = new Point(260, 248);
             kayitTarihiLabel.Name = "kayitTarihiLabel";
             kayitTarihiLabel.RightToLeft = RightToLeft.Yes;
             kayitTarihiLabel.Size = new Size(141, 35);
@@ -86,7 +84,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Calibri", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label5.Location = new Point(64, 216);
+            label5.Location = new Point(77, 245);
             label5.Name = "label5";
             label5.Size = new Size(177, 41);
             label5.TabIndex = 9;
@@ -97,7 +95,7 @@
             sonGirisLabel.AutoSize = true;
             sonGirisLabel.Font = new Font("Segoe UI", 15F, FontStyle.Bold);
             sonGirisLabel.ForeColor = Color.FromArgb(64, 64, 64);
-            sonGirisLabel.Location = new Point(247, 263);
+            sonGirisLabel.Location = new Point(260, 292);
             sonGirisLabel.Name = "sonGirisLabel";
             sonGirisLabel.RightToLeft = RightToLeft.Yes;
             sonGirisLabel.Size = new Size(141, 35);
@@ -108,43 +106,17 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Calibri", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(64, 257);
+            label2.Location = new Point(77, 286);
             label2.Name = "label2";
             label2.Size = new Size(149, 41);
             label2.TabIndex = 11;
             label2.Text = "Son Giriş:";
             // 
-            // webSitesiLabel
-            // 
-            webSitesiLabel.AutoSize = true;
-            webSitesiLabel.Font = new Font("Segoe UI", 15F, FontStyle.Bold);
-            webSitesiLabel.ForeColor = Color.FromArgb(64, 64, 64);
-            webSitesiLabel.Location = new Point(247, 336);
-            webSitesiLabel.Name = "webSitesiLabel";
-            webSitesiLabel.RightToLeft = RightToLeft.Yes;
-            webSitesiLabel.Size = new Size(141, 35);
-            webSitesiLabel.TabIndex = 14;
-            webSitesiLabel.Text = "21.11.2015";
-            webSitesiLabel.Visible = false;
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Calibri", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label4.Location = new Point(64, 333);
-            label4.Name = "label4";
-            label4.Size = new Size(172, 41);
-            label4.TabIndex = 13;
-            label4.Text = "Web Sitesi:";
-            label4.Visible = false;
-            // 
             // ProfilMenuForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1219, 778);
-            Controls.Add(webSitesiLabel);
-            Controls.Add(label4);
+            ClientSize = new Size(1013, 639);
             Controls.Add(sonGirisLabel);
             Controls.Add(label2);
             Controls.Add(kayitTarihiLabel);
@@ -172,7 +144,5 @@
         private Label label5;
         private Label sonGirisLabel;
         private Label label2;
-        private Label webSitesiLabel;
-        private Label label4;
     }
 }
