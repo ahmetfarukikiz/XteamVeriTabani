@@ -180,9 +180,47 @@ namespace XteamVeriTabani.Formlar.KutuphaneFormlari
             VerileriGetir(); // Ekranı yenile
         }
 
+        //her basıldığında 10dk oynanmış gibi yapar
         private void oyunuAcButton_Click(object sender, EventArgs e)
         {
+            int eklenenSure = 1;
 
+            using (NpgsqlConnection conn = new NpgsqlConnection(Oturum.BaglantiCumlesi))
+            {
+                try
+                {
+                    conn.Open();
+
+                    // süreyi update eder
+                    string updateSql = @"
+                        UPDATE OYUN_KULLANICI 
+                        SET oynama_suresi = oynama_suresi + @sure
+                        WHERE oyuncu_id = @uid AND oyun_id = @gid";
+
+                    using (NpgsqlCommand cmd = new NpgsqlCommand(updateSql, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@sure", eklenenSure);
+                        cmd.Parameters.AddWithValue("@uid", Oturum.HesapID);
+                        cmd.Parameters.AddWithValue("@gid", _oyunId); // Formun başındaki global değişken
+
+                        int etkilenen = cmd.ExecuteNonQuery();
+
+                        if (etkilenen > 0)
+                        {
+                            MessageBox.Show($"Oyun başlatıldı...\n{eklenenSure} saat oynandı.", $"{oyunBaslikLabel.Text}");
+                        }
+                        else
+                        {
+                            MessageBox.Show("Hata: Oyun kütüphanenizde bulunamadı.");
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Oyun açılırken hata oluştu: " + ex.Message);
+                }
+            }
+            VerileriGetir();
         }
 
         private void iadeEtButton_Click(object sender, EventArgs e)

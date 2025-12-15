@@ -77,6 +77,7 @@
             // 
             oyunAciklamaRTB.Location = new Point(28, 75);
             oyunAciklamaRTB.Name = "oyunAciklamaRTB";
+            oyunAciklamaRTB.ReadOnly = true;
             oyunAciklamaRTB.Size = new Size(411, 154);
             oyunAciklamaRTB.TabIndex = 3;
             oyunAciklamaRTB.Text = "Oyunun Açıklaması burada olacak";

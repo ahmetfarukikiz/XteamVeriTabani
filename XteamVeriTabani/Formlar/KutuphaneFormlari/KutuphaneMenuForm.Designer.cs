@@ -34,6 +34,7 @@
             label1 = new Label();
             oyunDuzenleButton = new Button();
             oyunEkleButton = new Button();
+            kampanyaEkleButton = new Button();
             SuspendLayout();
             // 
             // oyunuGorButton
@@ -94,11 +95,22 @@
             oyunEkleButton.UseVisualStyleBackColor = true;
             oyunEkleButton.Click += oyunEkleButton_Click;
             // 
+            // kampanyaEkleButton
+            // 
+            kampanyaEkleButton.Location = new Point(89, 732);
+            kampanyaEkleButton.Name = "kampanyaEkleButton";
+            kampanyaEkleButton.Size = new Size(160, 29);
+            kampanyaEkleButton.TabIndex = 20;
+            kampanyaEkleButton.Text = "Kampanya Ekle";
+            kampanyaEkleButton.UseVisualStyleBackColor = true;
+            kampanyaEkleButton.Click += kampanyaEkleButton_Click;
+            // 
             // KutuphaneMenuForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1219, 778);
+            Controls.Add(kampanyaEkleButton);
             Controls.Add(oyunEkleButton);
             Controls.Add(oyunDuzenleButton);
             Controls.Add(oyunuGorButton);
@@ -123,5 +135,6 @@
         private Label label1;
         private Button oyunDuzenleButton;
         private Button oyunEkleButton;
+        private Button kampanyaEkleButton;
     }
 }

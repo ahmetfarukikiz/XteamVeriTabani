@@ -56,11 +56,13 @@ public partial class KutuphaneMenuForm : Form
         {
             oyunEkleButton.Visible = true;
             oyunDuzenleButton.Visible = true;
+            kampanyaEkleButton.Visible = true;
             oyunuGorButton.Text = "Magazada Gor";
             GelistiriciOyunlariniListele();
         }
         else //oyuncuysa
         {
+            kampanyaEkleButton.Visible = false;
             oyunEkleButton.Visible = false;
             oyunDuzenleButton.Visible = false;
 
@@ -204,5 +206,11 @@ public partial class KutuphaneMenuForm : Form
         OyunEkleDuzenleForm oyunEkleDuzenleForm = new OyunEkleDuzenleForm();
         oyunEkleDuzenleForm.ShowDialog();
         OyunlariListele();
+    }
+
+    private void kampanyaEkleButton_Click(object sender, EventArgs e)
+    {
+        KampanyaEkleForm form1 = new KampanyaEkleForm();
+        form1.ShowDialog();
     }
 }
