@@ -26,8 +26,8 @@ public partial class KayitMenuForm : Form
             {
                 conn.Open();
 
-                //sp_giris_yap ile hesap turu anlama //saklýyordam
-                string hesapTurSql = "SELECT * FROM sp_giris_yap(@kadi, @sifre)";
+                //fn_giris_yap ile hesap turu anlama
+                string hesapTurSql = "SELECT * FROM fn_giris_yap(@kadi, @sifre)";
 
                 int gelenId = 0;
                 string gelenRolString = "";
@@ -158,7 +158,7 @@ public partial class KayitMenuForm : Form
             {
                 conn.Open();
 
-                string sql = "SELECT sp_kayit_ol(@eposta, @ad, @kadi, @sifre, @tur, @vergi, @web)";
+                string sql = "SELECT fn_kayit_ol(@eposta, @ad, @kadi, @sifre, @tur, @vergi, @web)";
 
                 using (NpgsqlCommand cmd = new NpgsqlCommand(sql, conn))
                 {

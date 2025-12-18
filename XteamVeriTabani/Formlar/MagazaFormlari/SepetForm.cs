@@ -146,7 +146,7 @@ namespace XteamVeriTabani.Formlar.MagazaFormlari
 
         private void siparisiTamamlaBtn_Click(object sender, EventArgs e)
         {
-            // 1. Önce basit bir kontrol: Sepet boşsa veritabanını yormayalım
+
             if (sepetListBox.Items.Count == 0)
             {
                 MessageBox.Show("Sepetiniz boş");
@@ -159,9 +159,7 @@ namespace XteamVeriTabani.Formlar.MagazaFormlari
                 {
                     conn.Open();
 
-                    // 2. SAKLI YORDAMI ÇAĞIRIYORUZ
-                    // Fonksiyon bize metin (TEXT) döndüğü için SELECT ile çağırıyoruz
-                    string sql = "SELECT sp_satin_al(@uid)";
+                    string sql = "SELECT fn_satin_al(@uid)";
 
                     using (NpgsqlCommand cmd = new NpgsqlCommand(sql, conn))
                     {

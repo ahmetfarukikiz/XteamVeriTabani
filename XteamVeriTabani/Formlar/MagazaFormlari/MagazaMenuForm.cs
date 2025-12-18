@@ -104,8 +104,8 @@ namespace XteamVeriTabani
                 {
                     conn.Open();
 
-                    // SAKLI YORDAMI ÇAĞIRIYORUZ
-                    string sql = "SELECT * FROM sp_oyun_ara(@metin, @katId)";
+                    // fonksiyon çağrısı
+                    string sql = "SELECT * FROM fn_oyun_ara(@metin, @katId)";
 
                     using (NpgsqlCommand cmd = new NpgsqlCommand(sql, conn))
                     {
