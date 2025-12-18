@@ -149,6 +149,7 @@
             kayitolTabPage.TabIndex = 1;
             kayitolTabPage.Text = "Kayıt Ol";
             kayitolTabPage.UseVisualStyleBackColor = true;
+            kayitolTabPage.Click += kayitolTabPage_Click;
             // 
             // kwebsitesiTB
             // 

@@ -11,7 +11,7 @@ public partial class KayitMenuForm : Form
         InitializeComponent();
     }
 
-   
+
     private void girisYapButton_Click(object sender, EventArgs e)
     {
         if (string.IsNullOrWhiteSpace(kullaniciTextBox.Text) || string.IsNullOrWhiteSpace(sifreTextBox.Text))
@@ -51,7 +51,7 @@ public partial class KayitMenuForm : Form
                 if (gelenId == 0 || gelenRolString == "Hatali")
                 {
                     MessageBox.Show("Kullanýcý adý veya þifre hatalý!", "Giriþ Baþarýsýz", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return; 
+                    return;
                 }
 
 
@@ -220,11 +220,12 @@ public partial class KayitMenuForm : Form
 
     private void kturComboBox_SelectedIndexChanged(object sender, EventArgs e)
     {
+        if(kturComboBox.SelectedIndex != -1) kayitOlButton.Enabled = true;
+
         if (kturComboBox.Text == "Geliþtirici")
         {
             kverginoTB.Enabled = true;
             kwebsitesiTB.Enabled = true;
-
         }
         else
         {
@@ -236,5 +237,11 @@ public partial class KayitMenuForm : Form
     private void KayitMenuForm_Load(object sender, EventArgs e)
     {
         sifreTextBox.PasswordChar = '*';
+        kayitOlButton.Enabled = kturComboBox.SelectedIndex != -1;
+    }
+
+    private void kayitolTabPage_Click(object sender, EventArgs e)
+    {
+
     }
 }
