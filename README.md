@@ -1,7 +1,7 @@
 Xteam - Veritabanı Yönetim Sistemi Projesi
 Bu proje, Sakarya Üniversitesi BSM 211 Veritabanı Yönetim Sistemleri dersi kapsamında geliştirilmiş; oyuncuların oyun satın alabildiği, geliştiricilerin oyun yayınlayabildiği ve kullanıcılar arası etkileşimin (arkadaşlık sistemi) bulunduğu kapsamlı bir oyun platformu yönetim sistemidir. Tam olarak Steam gibi bir oyun kütüphanesi olmasa da temelde aynı işlevi görür.
 
-Proje, Database-First yaklaşımıyla tasarlanmış olup PostgreSQL veritabanı ile C# (Windows Forms/Console) uygulama arayüzünün entegrasyonunu içerir. Toplamda 15'ten fazla tablo (ödev şartı), gelişmiş saklı yordamlar (Stored Procedures) ve tetikleyiciler (Triggers) kullanılarak(4 trigger 4 saklı yordam) güçlü bir iş mantığı kurulmuştur.
+Proje, Database-First yaklaşımıyla tasarlanmış olup PostgreSQL veritabanı ile C# (Windows Forms/Console) uygulama arayüzünün entegrasyonunu içerir. Toplamda 15'ten fazla tablo (ödev şartı), 4 adet function ve tetikleyici (Triggers) kullanılarak güçlü bir iş mantığı kurulmuştur.
 
 Kullanılan Teknolojiler
 * Programlama Dili: C#
@@ -18,11 +18,11 @@ Veritabanı mimarisi aşağıdaki temel kurallar üzerine inşa edilmiştir:
 
 Projede iş mantığını veritabanı seviyesinde yönetmek için şu yapılar kullanılmıştır:
 
-** Saklı Yordamlar (Functions)
-* sp_kayit_ol: Yeni hesap oluşturur ve ilgili alt tabloya (Oyuncu/Geliştirici) otomatik ekleme yapar.
-* sp_giris_yap: Kullanıcı kimlik doğrulamasını yapar ve giriş tarihini günceller.
-* sp_satin_al: Sepetteki ürünlerin toplam tutarını hesaplar, bakiye kontrolü yapar ve satın alma işlemini gerçekleştirip sepeti temizler. Siparis detay tablosuna kaydeder , kütüphaneye kaydeder. 
-* sp_oyun_ara: Metin ve kategori bazlı filtreleme ile oyun listeler.
+** İşlevler (functions)
+* fn_kayit_ol: Yeni hesap oluşturur ve ilgili alt tabloya (Oyuncu/Geliştirici) otomatik ekleme yapar.
+* fn_giris_yap: Kullanıcı kimlik doğrulamasını yapar ve giriş tarihini günceller.
+* fn_satin_al: Sepetteki ürünlerin toplam tutarını hesaplar, bakiye kontrolü yapar ve satın alma işlemini gerçekleştirip sepeti temizler. Siparis detay tablosuna kaydeder , kütüphaneye kaydeder. 
+* fn_oyun_ara: Metin ve kategori bazlı filtreleme ile oyun listeler.
 
 ** Tetikleyiciler (Triggers)
 * trg_check_arkadas: Kendine arkadaşlık isteği göndermeyi engeller.
@@ -33,9 +33,8 @@ Projede iş mantığını veritabanı seviyesinde yönetmek için şu yapılar k
 Projenin ilişkisel şeması ve Crow's Foot gösterimine sahip ER diyagramı rapor dosyasında detaylandırılmıştır. Temel tablolar şunlardır: HESAP, OYUNCU, GELISTIRICI, OYUN, KATEGORI, DIL, SEPET, SIPARIS, KAMPANYA, ARKADASLIK.
 
 Kurulum ve Çalıştırma :
-* Veritabanı: PostgreSQL üzerinde rapor içerisindeki SQL dump dosyasını çalıştırarak tabloları ve fonksiyonları oluşturun.
-* Uygulama: XteamVeriTabani.sln dosyasını Visual Studio ile açın.
-* Bağlantı: Veritabanı bağlantı dizesini (Connection String) kendi yerel PostgreSQL bilgilerinizle güncelleyin. Kendi postgre localhost şifrenizle yapın. 
-* Çalıştır: Projeyi derleyin ve başlatın.
+* Veritabanı: PostgreSQL üzerinde rapor içerisindeki SQL dump kodunu önce CREATE DATABASE kısmı sonra geri kalan kısmı olacak şekilde çalıştırın.
+* Visual Studioyu açıp clone repo bölümünden repoyu projenize ekleyin.
+* Oturum.cs kısmındaki BaglantiCumlesi stringi kendi veri tabanı sunucusu bilgilerinize göre düzenleyin.
 
 Bu proje BSM 211 Veritabanı Yönetim Sistemleri dersi için bir grup çalışmasıdır. Sinan ULUSİNAN / Umut Can GÖKHAN / Ahmet Faruk İKİZ
