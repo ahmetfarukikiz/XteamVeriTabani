@@ -25,6 +25,7 @@ namespace XteamVeriTabani
 
         private void HesapForm_Load(object sender, EventArgs e)
         {
+            sifreTB.PasswordChar = '*';
             HesapBilgileriniGetir();
         }
 
@@ -36,9 +37,6 @@ namespace XteamVeriTabani
                 {
                     conn.Open();
 
-                    // HESAP tablosunu temel alıyoruz.
-                    // GELISTIRICI tablosunu LEFT JOIN ile ekliyoruz.
-                    // Böylece kişi geliştirici değilse bile hata vermez, sadece o alanlar boş gelir.
                     string sql = @"
                         SELECT 
                             h.kullanici_adi, 
@@ -63,6 +61,7 @@ namespace XteamVeriTabani
                                 kullaniciAdiTB.Text = reader["kullanici_adi"].ToString();
                                 sifreTB.Text = reader["sifre"].ToString();
                                 hesapAdiTB.Text = reader["hesap_adi"].ToString();
+                                hesapAdiLabel.Text = reader["hesap_adi"].ToString();
                                 epostaTB.Text = reader["eposta"].ToString();
 
                                 // geliştiriciyse

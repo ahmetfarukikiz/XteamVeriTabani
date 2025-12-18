@@ -167,7 +167,7 @@
             Controls.Add(label1);
             Controls.Add(kAdiTB);
             FormBorderStyle = FormBorderStyle.Fixed3D;
-            MinimizeBox = false;
+            MaximizeBox = false;
             Name = "ArkadasMenuForm";
             StartPosition = FormStartPosition.CenterParent;
             Text = "ArkadasMenuFormcs";

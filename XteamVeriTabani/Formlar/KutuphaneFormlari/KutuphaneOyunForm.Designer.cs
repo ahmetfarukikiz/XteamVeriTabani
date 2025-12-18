@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(KutuphaneOyunForm));
             groupBox1 = new GroupBox();
             label8 = new Label();
             durumLabel = new Label();
@@ -47,12 +46,10 @@
             oyunAciklamaRTB = new RichTextBox();
             gelistiriciLabel = new Label();
             oyunuYukleSilButton = new Button();
-            pictureBox1 = new PictureBox();
             oyunBaslikLabel = new Label();
             oyunuAcButton = new Button();
             iadeEtButton = new Button();
             groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // groupBox1
@@ -243,7 +240,7 @@
             // oyunuYukleSilButton
             // 
             oyunuYukleSilButton.Font = new Font("Segoe UI", 12F);
-            oyunuYukleSilButton.Location = new Point(70, 449);
+            oyunuYukleSilButton.Location = new Point(70, 190);
             oyunuYukleSilButton.Name = "oyunuYukleSilButton";
             oyunuYukleSilButton.Size = new Size(152, 46);
             oyunuYukleSilButton.TabIndex = 13;
@@ -251,20 +248,11 @@
             oyunuYukleSilButton.UseVisualStyleBackColor = true;
             oyunuYukleSilButton.Click += oyunuYukleSilButton_Click;
             // 
-            // pictureBox1
-            // 
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(70, 187);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(339, 249);
-            pictureBox1.TabIndex = 11;
-            pictureBox1.TabStop = false;
-            // 
             // oyunBaslikLabel
             // 
             oyunBaslikLabel.AutoSize = true;
             oyunBaslikLabel.Font = new Font("Segoe UI", 22F);
-            oyunBaslikLabel.Location = new Point(70, 73);
+            oyunBaslikLabel.Location = new Point(70, 108);
             oyunBaslikLabel.Name = "oyunBaslikLabel";
             oyunBaslikLabel.Size = new Size(335, 50);
             oyunBaslikLabel.TabIndex = 10;
@@ -274,7 +262,7 @@
             // 
             oyunuAcButton.Enabled = false;
             oyunuAcButton.Font = new Font("Segoe UI", 12F);
-            oyunuAcButton.Location = new Point(240, 449);
+            oyunuAcButton.Location = new Point(240, 190);
             oyunuAcButton.Name = "oyunuAcButton";
             oyunuAcButton.Size = new Size(169, 46);
             oyunuAcButton.TabIndex = 15;
@@ -285,7 +273,7 @@
             // iadeEtButton
             // 
             iadeEtButton.Font = new Font("Segoe UI", 12F);
-            iadeEtButton.Location = new Point(70, 574);
+            iadeEtButton.Location = new Point(70, 256);
             iadeEtButton.Name = "iadeEtButton";
             iadeEtButton.Size = new Size(335, 46);
             iadeEtButton.TabIndex = 16;
@@ -302,7 +290,6 @@
             Controls.Add(oyunuAcButton);
             Controls.Add(groupBox1);
             Controls.Add(oyunuYukleSilButton);
-            Controls.Add(pictureBox1);
             Controls.Add(oyunBaslikLabel);
             FormBorderStyle = FormBorderStyle.Fixed3D;
             MaximizeBox = false;
@@ -312,7 +299,6 @@
             Load += KutuphaneOyunForm_Load;
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -327,7 +313,6 @@
         private RichTextBox oyunAciklamaRTB;
         private Label gelistiriciLabel;
         private Button oyunuYukleSilButton;
-        private PictureBox pictureBox1;
         private Label oyunBaslikLabel;
         private Button oyunuAcButton;
         private Label alinmaTarihiLabel;

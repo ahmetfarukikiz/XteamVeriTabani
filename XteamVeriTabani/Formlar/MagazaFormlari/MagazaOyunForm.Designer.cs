@@ -28,9 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MagazaOyunForm));
             oyunBaslikLabel = new Label();
-            pictureBox1 = new PictureBox();
             oyunAciklamaRTB = new RichTextBox();
             oyunFiyatLabel = new Label();
             sepeteEkleButton = new Button();
@@ -49,7 +47,6 @@
             label3 = new Label();
             label2 = new Label();
             kampanyaLabel = new Label();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dilDataGridView).BeginInit();
             SuspendLayout();
@@ -58,20 +55,11 @@
             // 
             oyunBaslikLabel.AutoSize = true;
             oyunBaslikLabel.Font = new Font("Segoe UI", 22F);
-            oyunBaslikLabel.Location = new Point(64, 107);
+            oyunBaslikLabel.Location = new Point(81, 88);
             oyunBaslikLabel.Name = "oyunBaslikLabel";
             oyunBaslikLabel.Size = new Size(335, 50);
             oyunBaslikLabel.TabIndex = 0;
             oyunBaslikLabel.Text = "League Of Legends";
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(64, 221);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(339, 249);
-            pictureBox1.TabIndex = 1;
-            pictureBox1.TabStop = false;
             // 
             // oyunAciklamaRTB
             // 
@@ -86,7 +74,7 @@
             // 
             oyunFiyatLabel.AutoSize = true;
             oyunFiyatLabel.Font = new Font("Segoe UI", 20F);
-            oyunFiyatLabel.Location = new Point(64, 493);
+            oyunFiyatLabel.Location = new Point(81, 194);
             oyunFiyatLabel.Name = "oyunFiyatLabel";
             oyunFiyatLabel.Size = new Size(99, 46);
             oyunFiyatLabel.TabIndex = 4;
@@ -95,7 +83,7 @@
             // sepeteEkleButton
             // 
             sepeteEkleButton.Font = new Font("Segoe UI", 12F);
-            sepeteEkleButton.Location = new Point(64, 542);
+            sepeteEkleButton.Location = new Point(81, 243);
             sepeteEkleButton.Name = "sepeteEkleButton";
             sepeteEkleButton.Size = new Size(234, 46);
             sepeteEkleButton.TabIndex = 5;
@@ -140,7 +128,7 @@
             groupBox1.Controls.Add(label1);
             groupBox1.Controls.Add(oyunAciklamaRTB);
             groupBox1.Controls.Add(gelistiriciLabel);
-            groupBox1.Location = new Point(460, 107);
+            groupBox1.Location = new Point(477, 88);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(556, 634);
             groupBox1.TabIndex = 8;
@@ -266,7 +254,7 @@
             kampanyaLabel.AutoSize = true;
             kampanyaLabel.BackColor = Color.Transparent;
             kampanyaLabel.Font = new Font("Segoe UI", 15F);
-            kampanyaLabel.Location = new Point(77, 418);
+            kampanyaLabel.Location = new Point(81, 138);
             kampanyaLabel.Name = "kampanyaLabel";
             kampanyaLabel.Size = new Size(163, 35);
             kampanyaLabel.TabIndex = 9;
@@ -282,7 +270,6 @@
             Controls.Add(groupBox1);
             Controls.Add(sepeteEkleButton);
             Controls.Add(oyunFiyatLabel);
-            Controls.Add(pictureBox1);
             Controls.Add(oyunBaslikLabel);
             FormBorderStyle = FormBorderStyle.Fixed3D;
             MaximizeBox = false;
@@ -290,7 +277,6 @@
             StartPosition = FormStartPosition.CenterParent;
             Text = "OyunForm";
             Load += MagazaOyunForm_Load;
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dilDataGridView).EndInit();

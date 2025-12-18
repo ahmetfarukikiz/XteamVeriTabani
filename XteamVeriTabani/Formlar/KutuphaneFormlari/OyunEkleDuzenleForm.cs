@@ -225,7 +225,7 @@ public partial class OyunEkleDuzenleForm : Form
             {
                 int islenenOyunID = _oyunID;
 
-                if (_oyunID == 0) //EKLEME
+                if (_oyunID == 0) //EKLEME  
                 {
                     string insertSql = @"
                             INSERT INTO OYUN (baslik, fiyat, cikis_tarihi, yukleme_boyutu, aciklama, gelistirici_id, kampanya_id, indirilme_sayisi)
