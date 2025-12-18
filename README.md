@@ -17,6 +17,7 @@ Veritabanı mimarisi aşağıdaki temel kurallar üzerine inşa edilmiştir:
 * Arkadaşlık isteklerinde bir kullanıcı kendisine istek gönderemez. Kendini arkadaş ekleyemez.
 
 Projede iş mantığını veritabanı seviyesinde yönetmek için şu yapılar kullanılmıştır:
+
 ** Saklı Yordamlar (Functions)
 * sp_kayit_ol: Yeni hesap oluşturur ve ilgili alt tabloya (Oyuncu/Geliştirici) otomatik ekleme yapar.
 * sp_giris_yap: Kullanıcı kimlik doğrulamasını yapar ve giriş tarihini günceller.
