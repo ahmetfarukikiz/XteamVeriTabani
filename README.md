@@ -1,7 +1,7 @@
 Xteam - Veritabanı Yönetim Sistemi Projesi
 Bu proje, Sakarya Üniversitesi BSM 211 Veritabanı Yönetim Sistemleri dersi kapsamında geliştirilmiş; oyuncuların oyun satın alabildiği, geliştiricilerin oyun yayınlayabildiği ve kullanıcılar arası etkileşimin (arkadaşlık sistemi) bulunduğu kapsamlı bir oyun platformu yönetim sistemidir. Tam olarak Steam gibi bir oyun kütüphanesi olmasa da temelde aynı işlevi görür.
 
-Proje, Database-First yaklaşımıyla tasarlanmış olup PostgreSQL veritabanı ile C# (Windows Forms/Console) uygulama arayüzünün entegrasyonunu içerir. Toplamda 15'ten fazla tablo (ödev şartı), 4 adet function ve tetikleyici (Triggers) kullanılarak güçlü bir iş mantığı kurulmuştur.
+Proje, Database-First yaklaşımıyla tasarlanmış olup PostgreSQL veritabanı ile C# (Windows Form App) uygulama arayüzünün entegrasyonunu içerir. Projede 16 adet varlık, 4 adet function ve tetikleyici (Triggers) kullanılmıştır.
 
 Kullanılan Teknolojiler
 * Programlama Dili: C#
