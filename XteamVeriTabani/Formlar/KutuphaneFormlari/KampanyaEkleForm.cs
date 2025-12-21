@@ -63,7 +63,7 @@ namespace XteamVeriTabani.Formlar.KutuphaneFormlari
                         cmd.ExecuteNonQuery();
 
                         MessageBox.Show("Kampanya başarıyla oluşturuldu.");
-                        this.Close(); // İşlem bitince formu kapat
+                        this.Close();
                     }
                 }
                 catch (PostgresException ex)

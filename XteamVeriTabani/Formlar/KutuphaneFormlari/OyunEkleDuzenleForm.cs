@@ -27,7 +27,7 @@ public partial class OyunEkleDuzenleForm : Form
 
     private int _oyunID = 0; // 0 ise Ekleme, >0 ise Düzenleme
 
-    // Constructor 1: Yeni Ekleme
+    //Yeni oyun eklemek için parametresiz constructor
     public OyunEkleDuzenleForm()
     {
         InitializeComponent();
@@ -36,7 +36,7 @@ public partial class OyunEkleDuzenleForm : Form
         this.Text = "Yeni Oyun Ekle";
     }
 
-    // Constructor 2: Düzenleme
+    //Düzenlemek için parametreli constructor
     public OyunEkleDuzenleForm(int duzenlenecekOyunID)
     {
         InitializeComponent();
@@ -63,7 +63,7 @@ public partial class OyunEkleDuzenleForm : Form
         {
             conn.Open();
 
-            // A. Kampanyaları Doldur
+            //Kampanyaları Doldur
             kampanyaComboBox.Items.Clear();
             kampanyaComboBox.Items.Add(new VeriItem { Text = "Kampanya Yok", Value = 0 }); // Varsayılan
 
@@ -81,7 +81,7 @@ public partial class OyunEkleDuzenleForm : Form
             }
             kampanyaComboBox.SelectedIndex = 0; // "Kampanya Yok" seçili gelsin
 
-            // B. Kategorileri Doldur
+            //Kategorileri Doldur
             kategoriCheckBox.Items.Clear();
             using (NpgsqlCommand cmd = new NpgsqlCommand("SELECT kategori_id, tur_adi FROM KATEGORI", conn))
             using (NpgsqlDataReader reader = cmd.ExecuteReader())
@@ -96,14 +96,14 @@ public partial class OyunEkleDuzenleForm : Form
                 }
             }
 
-            // C. Diller (GRID DOLDURMA)
+            //Diller data grid view ayarı
             dgvDiller.Rows.Clear();
             using (NpgsqlCommand cmd = new NpgsqlCommand("SELECT dil_id, dil_adi FROM DIL", conn))
             using (NpgsqlDataReader reader = cmd.ExecuteReader())
             {
                 while (reader.Read())
                 {
-                    // Grid'e satır ekle: ID, Dil Adı, Altyazı(False), Ses(False)
+                    //grid view'in satırları
                     dgvDiller.Rows.Add(reader["dil_id"], reader["dil_adi"].ToString(), false, false);
                 }
             }
@@ -135,7 +135,7 @@ public partial class OyunEkleDuzenleForm : Form
                         if (reader["kampanya_id"] != DBNull.Value)
                         {
                             int kmpId = Convert.ToInt32(reader["kampanya_id"]);
-                            // ComboBox'ta bu ID'yi bul ve seç
+                            // ComboBox'ta bu id yi bul
                             foreach (VeriItem item in kampanyaComboBox.Items)
                             {
                                 if (item.Value == kmpId)
@@ -197,17 +197,14 @@ public partial class OyunEkleDuzenleForm : Form
         }
     }
 
-    // eğer gelen id 0 dan büyükse yani gerçek bir değer geldiyse düzenleme yapar bir değer gelmediyse 0 varsayar ve ekleme yapar
     private void oyunEkleDuzenleButton(object sender, EventArgs e)
     {
-        // Basit Validasyon
         if (string.IsNullOrWhiteSpace(oyunAdiTextBox.Text) || string.IsNullOrWhiteSpace(fiyatTB.Text))
         {
             MessageBox.Show("Oyun Adı ve Fiyat zorunludur!");
             return;
         }
 
-        // Geliştirici ID'sini al (HesapID aslında geliştirici ID'sidir JOIN mantığına göre)
         int gelistiriciId = Oturum.HesapID;
         int kampanyaId = 0;
         if (kampanyaComboBox.SelectedItem != null)
@@ -272,9 +269,8 @@ public partial class OyunEkleDuzenleForm : Form
                     new NpgsqlCommand("DELETE FROM OYUN_DIL WHERE oyun_id=" + _oyunID, conn, trans).ExecuteNonQuery();
                 }
 
-                // --- İLİŞKİLİ TABLOLAR (KATEGORİ & DİL) ---
 
-                // 1. Kategorileri Ekle
+                //Kategorileri Ekle
                 foreach (VeriItem item in kategoriCheckBox.CheckedItems)
                 {
                     string katIns = "INSERT INTO OYUN_KATEGORI (oyun_id, kategori_id) VALUES (@oid, @kid)";
@@ -286,7 +282,7 @@ public partial class OyunEkleDuzenleForm : Form
                     }
                 }
 
-                // 3. DİLLERİ VE DETAYLARINI EKLE (GRID'DEN)
+                //DİLLERİ VE DETAYLARINI EKLE 
                 foreach (DataGridViewRow row in dgvDiller.Rows)
                 {
                     // Checkbox değerlerini güvenli şekilde al (Null gelebilir)
@@ -298,7 +294,6 @@ public partial class OyunEkleDuzenleForm : Form
                     {
                         int dilId = Convert.ToInt32(row.Cells["id"].Value);
 
-                        // Burada parametreler dinamik (altyazi, seslendirme)
                         string dilIns = "INSERT INTO OYUN_DIL (oyun_id, dil_id, altyazi_var_mi, seslendirme_var_mi) VALUES (@oid, @did, @alt, @ses)";
 
                         using (NpgsqlCommand cmd = new NpgsqlCommand(dilIns, conn, trans))
@@ -333,7 +328,7 @@ public partial class OyunEkleDuzenleForm : Form
         dgvDiller.Columns.Add("id", "ID");
         dgvDiller.Columns["id"].Visible = false;
 
-        // Dil Adı Sütunu (Sadece okunur)
+        // Dil Adı Sütunu
         dgvDiller.Columns.Add("ad", "Dil");
         dgvDiller.Columns["ad"].ReadOnly = true;
         dgvDiller.Columns["ad"].Width = 100;

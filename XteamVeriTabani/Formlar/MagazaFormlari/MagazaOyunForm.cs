@@ -50,7 +50,6 @@ public partial class MagazaOyunForm : Form
 
                 if (sonuc > 0)
                 {
-                    // BUTONU KAPATIYORUZ
                     sepeteEkleButton.Enabled = false;
                     sepeteEkleButton.Text = "Satın Alındı";
                 }
@@ -191,7 +190,7 @@ public partial class MagazaOyunForm : Form
                 using (NpgsqlCommand cmd = new NpgsqlCommand(sql, conn))
                 {
                     cmd.Parameters.AddWithValue("@uid", Oturum.HesapID);
-                    cmd.Parameters.AddWithValue("@gid", _oyunId); // Bu formun en başında tanımladığımız _oyunId
+                    cmd.Parameters.AddWithValue("@gid", _oyunId); 
 
                     cmd.ExecuteNonQuery();
 
@@ -214,25 +213,25 @@ public partial class MagazaOyunForm : Form
     {
         dilDataGridView.Columns.Clear();
 
-        // 1. Dil Adı Sütunu
+        //Dil Adı Sütunu
         dilDataGridView.Columns.Add("dil", "Dil");
         dilDataGridView.Columns["dil"].Width = 100;
 
-        // 2. Altyazı Sütunu (CheckBox)
+        // Altyazı Sütunu 
         DataGridViewCheckBoxColumn chkAltyazi = new DataGridViewCheckBoxColumn();
         chkAltyazi.HeaderText = "Altyazı";
         chkAltyazi.Name = "altyazi";
         chkAltyazi.Width = 60;
         dilDataGridView.Columns.Add(chkAltyazi);
 
-        // 3. Seslendirme Sütunu (CheckBox)
+        // Seslendirme Sütunu
         DataGridViewCheckBoxColumn chkSes = new DataGridViewCheckBoxColumn();
         chkSes.HeaderText = "Seslendirme";
         chkSes.Name = "ses";
         chkSes.Width = 80;
         dilDataGridView.Columns.Add(chkSes);
 
-        // Sadece okunabilir olsun
+     
         dilDataGridView.ReadOnly = true;
     }
 }

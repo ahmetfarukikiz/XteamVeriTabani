@@ -27,7 +27,7 @@ namespace XteamVeriTabani.Formlar.MagazaFormlari
         private void SepetiListele()
         {
             sepetListBox.Items.Clear();
-            decimal genelToplam = 0; // Toplamı döngü içinde hesaplayacağız
+            decimal genelToplam = 0;
 
             using (NpgsqlConnection conn = new NpgsqlConnection(Oturum.BaglantiCumlesi))
             {
@@ -114,12 +114,12 @@ namespace XteamVeriTabani.Formlar.MagazaFormlari
         {
             public int SepetId { get; set; }
             public int OyunId { get; set; }
-            public decimal SatisFiyati { get; set; } // İndirimli fiyatı burada tutacağız
+            public decimal SatisFiyati { get; set; } //indirimli fiyatın tutulduğu yer
             public string GorunumMetni { get; set; }
 
             public override string ToString()
             {
-                return GorunumMetni; // ListBox'ta sadece bu yazı görünür
+                return GorunumMetni; //listboxta görünen değişken
             }
         }
 
@@ -165,16 +165,13 @@ namespace XteamVeriTabani.Formlar.MagazaFormlari
                     {
                         cmd.Parameters.AddWithValue("@uid", Oturum.HesapID);
 
-                        // ExecuteScalar: Tek bir değer (string mesaj) döneceği için bunu kullanıyoruz
                         object sonuc = cmd.ExecuteScalar();
                         string mesaj = sonuc != null ? sonuc.ToString() : "Hata";
 
-                        // 3. GELEN MESAJI KONTROL EDİYORUZ
                         if (mesaj == "Basarili")
                         {
                             MessageBox.Show("Oyunlar kütüphanenize eklendi.", "Satın Alım Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                            // Ekranı güncelle: Sepet boşalmalı, bakiye düşmeli
                             SepetiListele();
                             GetBakiye();
                         }
@@ -188,7 +185,6 @@ namespace XteamVeriTabani.Formlar.MagazaFormlari
                         }
                         else
                         {
-                            // Beklenmedik bir hata (Örn: Veritabanı hatası)
                             MessageBox.Show("İşlem başarısız: " + mesaj);
                         }
                     }

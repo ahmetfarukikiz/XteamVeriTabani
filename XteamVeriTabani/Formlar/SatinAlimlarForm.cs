@@ -65,7 +65,6 @@ namespace XteamVeriTabani.Formlar
                     {
                         cmd.Parameters.AddWithValue("@oyuncuId", Oturum.HesapID);
 
-                        // DataGridView için en kolayı DataTable kullanmaktır
                         NpgsqlDataAdapter da = new NpgsqlDataAdapter(cmd);
                         DataTable dt = new DataTable();
                         da.Fill(dt);

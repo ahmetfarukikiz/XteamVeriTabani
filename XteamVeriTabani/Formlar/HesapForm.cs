@@ -132,7 +132,7 @@ namespace XteamVeriTabani
                 {
                     conn.Open();
 
-                    // --- ADIM 1: HESAP TABLOSU GÜNCELLEME (HERKES İÇİN) ---
+                    // HESAP TABLOSU GÜNCELLEME (HERKES İÇİN) ---
                     string hesapUpdateSql = @"
                         UPDATE HESAP 
                         SET kullanici_adi = @kadi, sifre = @sifre, hesap_adi = @hadi, eposta = @eposta
@@ -148,8 +148,7 @@ namespace XteamVeriTabani
                         cmd.ExecuteNonQuery();
                     }
 
-                    // --- ADIM 2: GELİŞTİRİCİ TABLOSU GÜNCELLEME (SADECE GELİŞTİRİCİ İSE) ---
-                    // Burada artık 'txtVergiNo.Visible' yerine doğrudan Oturum rolüne bakıyoruz.
+                    // GELİŞTİRİCİ TABLOSU GÜNCELLEME (geliştiriciyse)
                     if (Oturum.IsGelistirici())
                     {
                         string gelistiriciUpdateSql = @"
@@ -173,7 +172,7 @@ namespace XteamVeriTabani
 
                     MessageBox.Show("Bilgiler güncellendi.");
 
-                    // Kutuları tekrar pasife çek
+                    //kutuları düzenlemeyi kapat
                     kullaniciAdiTB.ReadOnly = true;
                     sifreTB.ReadOnly = true;
                     hesapAdiTB.ReadOnly = true;

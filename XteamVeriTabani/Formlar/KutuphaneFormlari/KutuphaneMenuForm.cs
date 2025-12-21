@@ -162,16 +162,16 @@ public partial class KutuphaneMenuForm : Form
     {
         public int OyunId { get; set; }
         public string Baslik { get; set; }
-        public string Durum { get; set; }        // Oyuncu için (Yüklü, Silindi vb.)
+        public string Durum { get; set; }        // Oyuncu için
         public string OynamaSuresi { get; set; } // Oyuncu için
         public string AlinmaTarihi { get; set; } // Oyuncu için
 
-        // Geliştirici için alanlar
+        //Geliştirici alanları
         public decimal Fiyat { get; set; }
         public int IndirilmeSayisi { get; set; }
         public bool GelistiriciMi { get; set; }
 
-        // ListBox'ta nasıl görüneceğini ayarlayan kısım
+        //ListBox'ta nasıl gözükeceğeğini ayarlayan kısım
         public override string ToString()
         {
             if (GelistiriciMi)

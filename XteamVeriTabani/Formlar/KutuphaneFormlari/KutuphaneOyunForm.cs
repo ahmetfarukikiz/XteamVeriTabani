@@ -150,18 +150,12 @@ namespace XteamVeriTabani.Formlar.KutuphaneFormlari
             // Durum değişimi: 2 ise 1 yap, 1 ise 2 yap
             int yeniDurumId = (_mevcutDurumId == 2) ? 1 : 2;
             string islemAdi = (yeniDurumId == 2) ? "Yükleme" : "Kaldırma";
-
-            // Bekleme efekti
-            Cursor.Current = Cursors.WaitCursor;
-            System.Threading.Thread.Sleep(600);
-            Cursor.Current = Cursors.Default;
-
+     
             using (NpgsqlConnection conn = new NpgsqlConnection(Oturum.BaglantiCumlesi))
             {
                 conn.Open();
 
-                // SENİN GÖNDERDİĞİN SQL (Update)
-                // Not: Tablomuzda sütun adı 'durum_id' olduğu için sorguyu ona göre yazdım.
+                //oyun kullanıcı tablosunda oyunun duurmunu güncelle
                 string sql = @"UPDATE OYUN_KULLANICI 
                                SET durum_id = @yeniDurumId 
                                WHERE oyuncu_id = @oyuncuId AND oyun_id = @oyunId";
@@ -180,7 +174,7 @@ namespace XteamVeriTabani.Formlar.KutuphaneFormlari
             VerileriGetir(); // Ekranı yenile
         }
 
-        //her basıldığında 10dk oynanmış gibi yapar
+        //her basıldığında 1 saat oynanmış gibi yapar
         private void oyunuAcButton_Click(object sender, EventArgs e)
         {
             int eklenenSure = 1;
@@ -201,7 +195,7 @@ namespace XteamVeriTabani.Formlar.KutuphaneFormlari
                     {
                         cmd.Parameters.AddWithValue("@sure", eklenenSure);
                         cmd.Parameters.AddWithValue("@uid", Oturum.HesapID);
-                        cmd.Parameters.AddWithValue("@gid", _oyunId); // Formun başındaki global değişken
+                        cmd.Parameters.AddWithValue("@gid", _oyunId); 
 
                         int etkilenen = cmd.ExecuteNonQuery();
 
@@ -225,7 +219,6 @@ namespace XteamVeriTabani.Formlar.KutuphaneFormlari
 
         private void iadeEtButton_Click(object sender, EventArgs e)
         {
-            // İade tutarı 0 ise (Hediye vs.) uyarı verelim ama işleme izin verelim
             string fiyatMesaj = _iadeEdilecekTutar > 0
                 ? $"{_iadeEdilecekTutar:N2} TL cüzdanınıza iade edilecek."
                 : "Bu oyun için ödenecek bir iade tutarı bulunamadı (Ücretsiz veya Hediye).";
@@ -251,7 +244,7 @@ namespace XteamVeriTabani.Formlar.KutuphaneFormlari
                 {
                     try
                     {
-                        // 1. Oyunu Kütüphaneden Sil
+                        //Oyunu Kütüphaneden Sil
                         string sqlSil = "DELETE FROM OYUN_KULLANICI WHERE oyuncu_id = @uid AND oyun_id = @gid";
                         using (NpgsqlCommand cmdSil = new NpgsqlCommand(sqlSil, conn))
                         {
@@ -260,7 +253,7 @@ namespace XteamVeriTabani.Formlar.KutuphaneFormlari
                             cmdSil.ExecuteNonQuery();
                         }
 
-                        // 2. Parayı Cüzdana İade Et (Sadece tutar 0'dan büyükse)
+                        //Paranın cüzdana iadesi
                         if (_iadeEdilecekTutar > 0)
                         {
                             string sqlPara = "UPDATE OYUNCU SET cuzdan_bakiyesi = cuzdan_bakiyesi + @tutar WHERE oyuncu_id = @uid";

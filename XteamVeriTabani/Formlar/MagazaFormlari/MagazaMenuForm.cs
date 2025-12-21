@@ -85,7 +85,7 @@ namespace XteamVeriTabani
                 }
             }
 
-            // 4. Varsayılan olarak "Tüm Kategoriler" seçili gelsin
+            // Varsayılan olarak "Tüm Kategoriler" seçili gelsin
             kategoriComboBox.SelectedIndex = 0;
         }
 

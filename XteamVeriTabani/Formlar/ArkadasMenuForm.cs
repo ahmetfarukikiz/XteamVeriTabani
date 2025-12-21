@@ -30,7 +30,6 @@ namespace XteamVeriTabani
             arkadasListBox.Items.Clear(); // Kabul edilmiş arkadaşlar listbox'ı
             gelenIstekListBox.Items.Clear();       // Gelen istekler listbox'ı
 
-            // Bağlantı cümlesini Oturum sınıfından alıyoruz
             using (NpgsqlConnection conn = new NpgsqlConnection(Oturum.BaglantiCumlesi))
             {
                 try
@@ -38,7 +37,6 @@ namespace XteamVeriTabani
                     conn.Open();
 
                     // mevcut arkadaşları listeleyen sql
-                    // DEĞİŞİKLİK: kullanıcı_adı -> hesap_adi
                     string arkadasSql = @"
                         SELECT h.hesap_adi, h.id 
                         FROM ARKADASLIK a
@@ -56,7 +54,6 @@ namespace XteamVeriTabani
                             {
                                 arkadasListBox.Items.Add(new ArkadasListBoxItem
                                 {
-                                    // DEĞİŞİKLİK: okurken de hesap_adi
                                     KullaniciAdi = reader["hesap_adi"].ToString(),
                                     ArkadasId = Convert.ToInt32(reader["id"]) // Arkadaşın ID'si
                                 });
@@ -64,8 +61,6 @@ namespace XteamVeriTabani
                         }
                     }
 
-                    // Gelen istekleri listeleyen sql
-                    // DEĞİŞİKLİK: kullanıcı_adı -> hesap_adi
                     string istekSql = @"
                         SELECT a.istek_gonderen_id, h.hesap_adi
                         FROM ARKADASLIK a
@@ -121,7 +116,6 @@ namespace XteamVeriTabani
                 int hedefId = 0;
 
                 // isimden id bulma
-                // DEĞİŞİKLİK: kullanıcı_adı -> hesap_adi
                 string kulBulSql = @"
                 SELECT o.oyuncu_id 
                 FROM OYUNCU o

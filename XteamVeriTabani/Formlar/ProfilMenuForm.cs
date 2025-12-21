@@ -32,8 +32,6 @@ namespace XteamVeriTabani
                 {
                     conn.Open();
 
-                    // SENİN VERİTABANINA TAM UYUMLU SQL SORGUSU
-                    // h.son_giris_tarihi YERİNE h.son_giris YAPILDI
                     string sql = @"
                         SELECT h.hesap_adi, h.kayit_tarihi, h.son_giris, o.seviye
                         FROM HESAP h

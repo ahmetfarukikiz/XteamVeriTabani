@@ -74,7 +74,7 @@
             // 
             oyunFiyatLabel.AutoSize = true;
             oyunFiyatLabel.Font = new Font("Segoe UI", 20F);
-            oyunFiyatLabel.Location = new Point(81, 194);
+            oyunFiyatLabel.Location = new Point(81, 203);
             oyunFiyatLabel.Name = "oyunFiyatLabel";
             oyunFiyatLabel.Size = new Size(99, 46);
             oyunFiyatLabel.TabIndex = 4;
@@ -83,7 +83,7 @@
             // sepeteEkleButton
             // 
             sepeteEkleButton.Font = new Font("Segoe UI", 12F);
-            sepeteEkleButton.Location = new Point(81, 243);
+            sepeteEkleButton.Location = new Point(81, 252);
             sepeteEkleButton.Name = "sepeteEkleButton";
             sepeteEkleButton.Size = new Size(234, 46);
             sepeteEkleButton.TabIndex = 5;
@@ -163,7 +163,7 @@
             kategoriListBox.FormattingEnabled = true;
             kategoriListBox.Location = new Point(26, 524);
             kategoriListBox.Name = "kategoriListBox";
-            kategoriListBox.Size = new Size(235, 104);
+            kategoriListBox.Size = new Size(372, 104);
             kategoriListBox.TabIndex = 23;
             // 
             // label5

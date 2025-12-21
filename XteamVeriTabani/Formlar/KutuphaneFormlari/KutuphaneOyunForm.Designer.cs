@@ -240,7 +240,7 @@
             // oyunuYukleSilButton
             // 
             oyunuYukleSilButton.Font = new Font("Segoe UI", 12F);
-            oyunuYukleSilButton.Location = new Point(70, 190);
+            oyunuYukleSilButton.Location = new Point(70, 193);
             oyunuYukleSilButton.Name = "oyunuYukleSilButton";
             oyunuYukleSilButton.Size = new Size(152, 46);
             oyunuYukleSilButton.TabIndex = 13;
@@ -252,7 +252,7 @@
             // 
             oyunBaslikLabel.AutoSize = true;
             oyunBaslikLabel.Font = new Font("Segoe UI", 22F);
-            oyunBaslikLabel.Location = new Point(70, 108);
+            oyunBaslikLabel.Location = new Point(70, 86);
             oyunBaslikLabel.Name = "oyunBaslikLabel";
             oyunBaslikLabel.Size = new Size(335, 50);
             oyunBaslikLabel.TabIndex = 10;
@@ -262,7 +262,7 @@
             // 
             oyunuAcButton.Enabled = false;
             oyunuAcButton.Font = new Font("Segoe UI", 12F);
-            oyunuAcButton.Location = new Point(240, 190);
+            oyunuAcButton.Location = new Point(236, 193);
             oyunuAcButton.Name = "oyunuAcButton";
             oyunuAcButton.Size = new Size(169, 46);
             oyunuAcButton.TabIndex = 15;
