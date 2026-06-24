@@ -52,9 +52,11 @@ Projede iş mantığını veritabanı seviyesinde yönetmek için şu yapılar k
 ---
 
 ## 🗂️ Veritabanı Şeması
-Projenin ilişkisel şeması ve Crow's Foot gösterimine sahip ER diyagramı rapor dosyasında detaylandırılmıştır. Temel tablolar şunlardır: 
-
+Projenin ilişkisel şeması ve Crow's Foot gösterimine sahip ER diyagramı rapor dosyasında detaylandırılmıştır. Temel tablolar şunlardır: <br>
 `HESAP`, `OYUNCU`, `GELISTIRICI`, `OYUN`, `KATEGORI`, `DIL`, `SEPET`, `SIPARIS`, `KAMPANYA`, `ARKADASLIK`.
+
+![crowsfoot](https://github.com/ahmetfarukikiz/XteamVeriTabani/blob/master/crowsfoot.png)
+
 
 ---
 
